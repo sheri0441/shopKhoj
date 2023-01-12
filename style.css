@@ -152,7 +152,6 @@ img{
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.484),rgb(0, 0, 0));
-    /* z-index: ; */
 }
 
 .slide{
@@ -284,14 +283,29 @@ img{
     border-radius: var(--border-r);
     position: relative;
     flex-grow: 1;
+    font-weight:var(--font-m) ;
+    color: black;
+}
+
+.sreachBar::placeholder{
+    color: var(--clr-mgray);
+    font-size: 0.75rem;
+    font-weight: var(--font-m);
+    text-transform: capitalize;
+}
+
+@media (min-width:64rem) {
+    .sreachBar::placeholder{
+        font-size: 1rem;
+    }
 }
 
 
 
 .cityOption{
-    background: url('./asset/icon/location.svg');
-    background-position: 0.5rem 50%; 
-    background-repeat: no-repeat;
+    background: url('./asset/icon/location.svg') 0.5rem 50% no-repeat, url('./asset/icon/cityOptionArrow.svg') 95% 50% no-repeat;
+    /* background-position: 0.5rem 50%; 
+    background-repeat: no-repeat; */
     background-size: 1rem;
     padding: 1.25rem 2.125rem;
     border: 1px solid var(--clr-lgray);
@@ -299,6 +313,17 @@ img{
     appearance: none;
     margin: 0.75rem 0;
     
+}
+
+.cityOption:checked{
+    font-size: 1rem;
+    color: var(--clr-mgray);
+}
+
+.cityOption > option {
+    font-weight: var(--clr-mgray);
+    font-size: 1rem;
+    color: var(--clr-red);
 }
 
 @media (min-width:64rem) {
