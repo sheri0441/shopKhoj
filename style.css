@@ -329,7 +329,6 @@ img{
 @media (min-width:64rem) {
     .cityOption{
         margin: 0;
-        /* width: 100%; */
     }
 }
 
@@ -342,7 +341,7 @@ img{
     margin-inline: auto;
     display: flex;
     align-items: center;
-    
+    cursor: pointer;
 }
 
 @media (min-width:64rem) {
@@ -388,7 +387,7 @@ img{
 
 @media (min-width:64rem) {
     .Banner>div{
-        background: url('./asset/image/BannerAvataar.png') center right no-repeat;
+        background: url('./asset/image/BannerAvataar.png') bottom right no-repeat;
         background-color:rgba(255, 255, 255, 0.72) ;
     }
 }
@@ -410,4 +409,17 @@ h1{
 
 h1>span{
     color: var(--clr-red);
+}
+
+/* Best Market Section  */
+.sectionTitle{
+    font-size: 1.25rem;
+    font-weight: var(--font-b);
+    text-align: center;
+}
+
+@media (min-width:64rem) {
+    .sectionTitle{
+        font-size: 3rem;
+    }
 }

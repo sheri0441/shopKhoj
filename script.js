@@ -8,7 +8,7 @@ const headerBg = () => {
         ) {
             header[0].style.background = "transparent";
         } else {
-            header[0].style.background = "#000" ;
+            header[0].style.background = "#9597A1" ;
         }
 
 }
