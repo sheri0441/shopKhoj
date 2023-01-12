@@ -1,22 +1,18 @@
 
 // header bg changer 
 const header = document.getElementsByClassName("header-style");
-console.log(header[0]);
 
 const headerBg = () => {
     if (
         window.scrollY === 0
         ) {
             header[0].style.background = "transparent";
-            console.log('working');
         } else {
             header[0].style.background = "#000" ;
-            console.log('Notworking');
         }
 
 }
     
-
 window.addEventListener('scroll', headerBg)
 
 // slider functional code

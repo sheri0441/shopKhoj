@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Shop Khoj</title>
 </head>
-<body style="background-color: aquamarine;">
+<body>
     <header class="header-style" id="header">
         <a href="#" >
             <picture >
@@ -24,61 +24,70 @@
             <img src="./asset/icon/hamburger.svg" alt="hamburger" class="hamburger">
         </div>
     </header>
-    <article class="herosection">
-        <section class="slider">
-            <div class="sliderContainer">
-                <picture>
-                    <source media="(min-width: 1024px" srcset="./asset/image/heroSliderD.png" >
-                    <img class="slide show" src="./asset/image/heroSlider.png" alt="girlShopping">
-                </picture>
-                <picture>
-                    <source media="(min-width: 1024px" srcset="./asset/image/heroSlider2D.png" >
-                    <img class="slide" src="./asset/image/heroSlider2.png" alt="shoppingCounter">
-                </picture>
-                <picture>
-                    <source media="(min-width: 1024px" srcset="./asset/image/heroSlider3D.png" >
-                    <img class="slide" src="./asset/image/heroSlider3.png" alt="girlShopping">
-                </picture>
-            </div>
-
-            <button class="arrow-left" onclick="plusDivs(-1)" id="arrow-left">
-                <img src="./asset/arrow.svg" alt="" srcset="">
-            </button>
-            <button class="arrow-right" onclick="plusDivs(1)" id="arrow-right">
-                <img src="./asset/arrow.svg" alt="" srcset="">
-            </button>
-
-            <div class="sliderPoints">
-                <div class="slidePoint active" onclick="currentDiv(1)"></div>
-                <div class="slidePoint" onclick="currentDiv(2)"></div>
-                <div class="slidePoint" onclick="currentDiv(3)"></div>
-            </div>
-        </section>
-
-        <section class="heroSreachArea">
-            <h1 class="sreachAreaTitle">Find 1000+ best shops</h1>
-            <form class="sreachOption">
-                <input type="search" class="sreachBar" name="" id="" placeholder="search for sop, mall, market...">
-                <select class="cityOption">
-                    <option disabled selected >select city</option>
-                    <option >Delhi</option>
-                    <option >Mumbai</option>
-                    <option >Chennai</option>
-                    <option >Bangalore</option>
-                    <option >Kolkata</option>
-                    <option >Ahmedabad</option>
-                    <option >Hyderabad</option>
-                    <option >Pune</option>
-                </select>
-                <button type="submit" class="sreachBtn">
-                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.89856 0C3.54871 0 0 3.54871 0 7.89856C0 12.2484 3.54871 15.7971 7.89856 15.7971C12.2484 15.7971 15.7971 12.2484 15.7971 7.89856C15.7971 3.54871 12.2484 0 7.89856 0ZM7.89856 2.10688C11.11 2.10688 13.6902 4.68714 13.6902 7.89856C13.6902 11.11 11.11 13.6902 7.89856 13.6902C4.68714 13.6902 2.10688 11.11 2.10688 7.89856C2.10688 4.68714 4.68714 2.10688 7.89856 2.10688Z" fill="white"/>
-                        <path d="M13.1653 12.0898C12.8844 12.09 12.6152 12.2023 12.4176 12.4017C12.22 12.6013 12.1101 12.8714 12.1126 13.1523C12.1151 13.4331 12.2295 13.7013 12.4306 13.8974L18.2223 19.6931C18.4891 19.9591 18.8773 20.0626 19.2408 19.9646C19.6046 19.8668 19.8882 19.5822 19.9852 19.2183C20.0823 18.8544 19.9778 18.4665 19.7112 18.2005L13.9195 12.4088C13.7215 12.2052 13.4495 12.0902 13.1655 12.09L13.1653 12.0898Z" fill="white"/>
-                        </svg><span>Search</span>
+    <main>
+        <article class="herosection">
+            <section class="slider">
+                <div class="sliderContainer">
+                    <picture>
+                        <source media="(min-width: 1024px" srcset="./asset/image/heroSliderD.png" >
+                        <img class="slide show" src="./asset/image/heroSlider.png" alt="girlShopping">
+                    </picture>
+                    <picture>
+                        <source media="(min-width: 1024px" srcset="./asset/image/heroSlider2D.png" >
+                        <img class="slide" src="./asset/image/heroSlider2.png" alt="shoppingCounter">
+                    </picture>
+                    <picture>
+                        <source media="(min-width: 1024px" srcset="./asset/image/heroSlider3D.png" >
+                        <img class="slide" src="./asset/image/heroSlider3.png" alt="girlShopping">
+                    </picture>
+                </div>
+    
+                <button class="arrow-left" onclick="plusDivs(-1)" id="arrow-left">
+                    <img src="./asset/arrow.svg" alt="" srcset="">
                 </button>
-            </form>
-        </section>
-    </article>
+                <button class="arrow-right" onclick="plusDivs(1)" id="arrow-right">
+                    <img src="./asset/arrow.svg" alt="" srcset="">
+                </button>
+    
+                <div class="sliderPoints">
+                    <div class="slidePoint active" onclick="currentDiv(1)"></div>
+                    <div class="slidePoint" onclick="currentDiv(2)"></div>
+                    <div class="slidePoint" onclick="currentDiv(3)"></div>
+                </div>
+            </section>
+    
+            <section class="heroSreachArea">
+                <h2 class="sreachAreaTitle">Find 1000+ best shops</h2>
+                <form class="sreachOption">
+                    <input type="search" class="sreachBar" name="" id="" placeholder="search for sop, mall, market...">
+                    <select class="cityOption">
+                        <option disabled selected >select city</option>
+                        <option >Delhi</option>
+                        <option >Mumbai</option>
+                        <option >Chennai</option>
+                        <option >Bangalore</option>
+                        <option >Kolkata</option>
+                        <option >Ahmedabad</option>
+                        <option >Hyderabad</option>
+                        <option >Pune</option>
+                    </select>
+                    <button type="submit" class="sreachBtn">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.89856 0C3.54871 0 0 3.54871 0 7.89856C0 12.2484 3.54871 15.7971 7.89856 15.7971C12.2484 15.7971 15.7971 12.2484 15.7971 7.89856C15.7971 3.54871 12.2484 0 7.89856 0ZM7.89856 2.10688C11.11 2.10688 13.6902 4.68714 13.6902 7.89856C13.6902 11.11 11.11 13.6902 7.89856 13.6902C4.68714 13.6902 2.10688 11.11 2.10688 7.89856C2.10688 4.68714 4.68714 2.10688 7.89856 2.10688Z" fill="white"/>
+                            <path d="M13.1653 12.0898C12.8844 12.09 12.6152 12.2023 12.4176 12.4017C12.22 12.6013 12.1101 12.8714 12.1126 13.1523C12.1151 13.4331 12.2295 13.7013 12.4306 13.8974L18.2223 19.6931C18.4891 19.9591 18.8773 20.0626 19.2408 19.9646C19.6046 19.8668 19.8882 19.5822 19.9852 19.2183C20.0823 18.8544 19.9778 18.4665 19.7112 18.2005L13.9195 12.4088C13.7215 12.2052 13.4495 12.0902 13.1655 12.09L13.1653 12.0898Z" fill="white"/>
+                            </svg><span>Search</span>
+                    </button>
+                </form>
+            </section>
+        </article>
+        <section class="container">
+            <article class="Banner">
+                <div>
+                    <h1><span>#1</span> India Shopping Guide</h1>
+                </div>
+            </article>
+        </section>  
+    </main>
 
     <script src="script.js"></script>    
    
