@@ -42,3 +42,37 @@ for (i = 0; i < dots.length; i++) {
 x[slideIndex-1].style.display = "block";  
 dots[slideIndex-1].className += " active";
 }
+
+
+const sliderChanger = () =>{
+    setInterval(function () {
+        plusDivs(1);
+        sliderChanger;
+    }, 5000)
+
+} 
+
+
+window.addEventListener('load', sliderChanger)
+
+
+// Read more and Read less Button for not on the home page 
+
+const moreBtn = document.getElementById('moreBtn')
+const lessBtn = document.getElementById('lessBtn')
+const extraText = document.getElementById('extraText');
+
+const showText = () => {
+    moreBtn.style.display = "none";
+    lessBtn.style.display = "inline";
+    extraText.style.display = "inline";
+}
+const hideText = () => {
+    moreBtn.style.display = "inline";
+    lessBtn.style.display = "none";
+    extraText.style.display = "none";
+}
+
+
+moreBtn.addEventListener('click', showText)
+lessBtn.addEventListener('click', hideText)

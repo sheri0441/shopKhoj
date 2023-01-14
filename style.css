@@ -3,6 +3,7 @@
     --clr-white: #FFFFFF;
     --clr-lgray: #CCCFD7;
     --clr-mgray: #9597A1;
+    --clr-rgray: #FFF8F8;
     --border-r: 0.75rem;
     --font-l : 300;
     --font-r : 400;
@@ -263,28 +264,79 @@ img{
     border-radius: var(--border-r) ;
     display: flex;
     flex-direction: column;
+    max-width: 1008px;
 }
 
 @media (min-width:64rem) {
     .sreachOption{
         flex-direction: row;
-        justify-content: space-between;
-        gap: 1rem;
+        /* justify-content: space-between; */
+        /* gap: 1rem; */
     }
 }
 
+.sreachBar-wrapper{
+    background-color: var(--clr-white);
+    width: 100%;
+    max-width: 546px;
+    position: relative;
+    border: 1px solid var(--clr-lgray);
+    border-radius: var(--border-r);
+    margin-inline: auto;
+}
+
+.sreachBar-wrapper::before{
+    content: '';
+    background-image: url('./asset/icon/graySreach.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 14px;
+    height: 14px;
+    transform: translateY(-60%);
+}
+
 .sreachBar{
+    background-color: transparent;
+    padding: 1.25rem 2.125rem;
+    width: 100%;
+    border-radius: var(--border-r);
+}
+
+.sreachBar::placeholder{
+    color: var(--clr-mgray);
+    font-size: 0.75rem;
+    font-weight: var(--font-m);
+    text-transform: capitalize;
+}
+
+/* .sreachBar{
     background: url('./asset/icon/graySreach.svg');
-    background-position: 0.5rem 50%; 
+    background-position: 15px 21px; 
     background-repeat: no-repeat;
     background-size: 1rem;
+
     padding: 1.25rem 2.125rem;
     border: 1px solid var(--clr-lgray);
     border-radius: var(--border-r);
     position: relative;
-    flex-grow: 1;
     font-weight:var(--font-m) ;
     color: black;
+    max-width: 456px;
+    margin-inline: auto;
+    width: 100%;
+}
+
+.sreachBar::before{
+    content: '';
+    background-image: url('./asset/icon/graySreach.svg');
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .sreachBar::placeholder{
@@ -295,15 +347,27 @@ img{
 }
 
 @media (min-width:64rem) {
+    .sreachBar{
+        margin-inline: 0;
+    }
     .sreachBar::placeholder{
         font-size: 1rem;
     }
-}
+} */
+
+@media (min-width:64rem) {
+    .sreachBar-wrapper{
+        margin-inline: 0;
+    }
+    .sreachBar::placeholder{
+        font-size: 1rem;
+    }
+} 
 
 
 
 .cityOption{
-    background: url('./asset/icon/location.svg') 0.5rem 50% no-repeat, url('./asset/icon/cityOptionArrow.svg') 95% 50% no-repeat;
+    background: url('./asset/icon/location.svg') 0.5rem 17px no-repeat, url('./asset/icon/cityOptionArrow.svg') 95% 50% no-repeat;
     /* background-position: 0.5rem 50%; 
     background-repeat: no-repeat; */
     background-size: 1rem;
@@ -312,6 +376,10 @@ img{
     border-radius: var(--border-r);
     appearance: none;
     margin: 0.75rem 0;
+    width: 100%;
+    max-width: 252px;
+    margin-inline: auto;
+    
     
 }
 
@@ -329,6 +397,8 @@ img{
 @media (min-width:64rem) {
     .cityOption{
         margin: 0;
+        margin-left: 20px;
+
     }
 }
 
@@ -342,15 +412,18 @@ img{
     display: flex;
     align-items: center;
     cursor: pointer;
+
 }
 
 @media (min-width:64rem) {
     .sreachBtn{
         margin-inline: 0;
+        margin-left: auto;
     }
 }
 .sreachBtn > span {
     font-weight: var(--font-sb);
+    margin-left: 9px;
 }
 
 /* Banner  */
@@ -559,20 +632,25 @@ h1>span{
 }
 
 .sectionBtn{
+    width: 183px;
+    height: 56px;
     color: var(--clr-red);
     font-weight: var(--font-sb);
-    padding: 20px 34px;
     border: 1px solid var(--clr-red);
     border-radius: var(--border-r);
     display: block;
     margin-inline: auto;
-    width: fit-content;
     letter-spacing: 2%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width:48em) {
     .sectionBtn{
-        padding: 29px 54px;
+        width: 227px;
+        height: 74px;
     }
 }
 
@@ -1062,7 +1140,7 @@ h1>span{
         background-color: var(--clr-white);
         color: black;
         width: 461px;
-        border-radius: var(--border-r);
+        border-radius: 10px 0px 0px 10px;
         margin-top: 0;
     
     }
@@ -1088,5 +1166,778 @@ h1>span{
     
 .submitBtn{
     margin-top: 0;
+    border-radius: 0 10px 10px 0;
+    padding: 30px 39px;
 }
 }
+
+
+/* Shop for Jewellery */
+.shopJewell{
+    background-color: var(--clr-rgray);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.jewellaryShop-Wrapper{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width:48em) {
+    .jewellaryShop-Wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+}
+
+.jewellaryShopCard{
+    position: relative;
+    width: 343px;
+    height: 447px;
+    border-radius: var(--border-r);
+    margin-inline: auto;
+}
+
+.jewellaryShopCard+.jewellaryShopCard{
+    margin-top: 20px;
+}
+
+
+
+@media (min-width:48em) {
+    .jewellaryShopCard{
+        width: 384px;
+        height: 472px;
+    }
+
+    .jewellaryShopCard+.jewellaryShopCard{
+        margin-top: 0;
+    }
+    
+}
+
+.jewellaryShopCard-detail{
+    width: 316px;
+    height: 187px;
+    background-color: var(--clr-white);
+    padding: 31px 31px 30px 30px;
+    margin-top: -117px;
+    margin-left: 14px;
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-r);
+}
+
+@media (min-width:48em) {
+    .jewellaryShopCard-detail{
+        width: 352px;
+        height: 162px;
+        margin-top: -113px;
+        margin-left: 16px;
+        padding-top: 35px;
+        padding-bottom: 34px;
+    }
+}
+.jewellaryShopCard-detail>h3{
+    font-size: 18px;
+    font-weight: var(--font-sb);
+    color: #000;
+}
+
+.jewellaryShopCard-detail>div{
+    display: flex;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: var(--border-r);
+}
+
+
+
+.jewellaryShopCard-detail>div >p{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.609);
+}
+
+.jewellaryShopCard-detail>div >img{
+    width: 12px;
+    margin-right: 7px;
+}
+
+@media (min-width:48em) {
+    .jewellaryShopCard-detail>div >p{
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.609);
+    }
+    
+    .jewellaryShopCard-detail>div >img{
+        width: 10px;
+        margin-right: 5px;
+    }
+}
+
+.jewellaryShopCard-detail>a{
+    color: var(--clr-white);
+    padding: 18px 39px;
+    background-color: #000;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: var(--font-m);
+    text-transform: capitalize;
+    margin-top: 27px;
+}
+.jewellaryShopCard-detail>a:hover{
+    background-color: var(--clr-red);
+}
+
+
+/* Blog Post section  */
+
+.blogSection{
+    padding-bottom: 50px;
+}
+
+@media (min-width:48em) {
+    .blogSection{
+    padding-bottom: 100px;
+    }
+}
+
+.blogPost-wrapper{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width:48em) {
+    .blogPost-wrapper{
+        margin-top: 60px;
+        margin-bottom: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+}
+
+.blogPost{
+    width: 343px;
+    height: 516px;
+    background-color: var(--clr-white);
+    border: 1px solid #DDDDDD;
+    padding: 11px;
+    border-radius: var(--border-r);
+    display: block;
+    margin-inline: auto;
+}
+
+.blogPost:hover{
+    border: 1px solid var(--clr-red);
+}
+
+
+@media (min-width:48em) {
+    .blogPost{
+        width: 384px;
+        height: 549px;
+        padding: 15px;
+    }
+}
+
+.blogPost-detail{
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.blogPost-detail>div{
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.blogPost-detail>div:first-child>img{
+    width: 11px;
+}
+
+.blogPost-detail>div:nth-child(2){
+    margin-left: 15px;
+}
+
+.blogPost-detail>div:nth-child(2)>img{
+    width: 9px;
+}
+
+.blogPost-detail>div:nth-child(2)>p{
+    color: var(--clr-red);
+}
+
+.blogPost-detail>div:last-child{
+    margin-left: auto;
+}
+
+
+.blogPost-detail>div:last-child>img{
+    width: 17px;
+}
+
+.blogPost-detail>div>p{
+    font-size: 10px;
+    color: #535353;
+    text-align: center;
+    width: fit-content;
+    margin-left: 5px;
+}
+
+
+@media (min-width:48em) {
+    .blogPost-detail>div:first-child>img{
+        width: 15px;
+    }
+
+    .blogPost-detail>div:nth-child(2){
+        margin-left: 12px;
+    }
+
+    .blogPost-detail>div:nth-child(2)>img{
+        width: 12px;
+    }
+
+    
+    .blogPost-detail>div:last-child>img{
+    width: 20px;
+    }
+
+    .blogPost-detail>div>p{
+        font-size: 13px;
+    }
+}
+
+.blogPost>h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--font-m);
+    letter-spacing: 2%;
+    margin-top: 20px;
+    color: #000;
+
+}
+
+@media (min-width:48em) {    
+    .blogPost>h3{
+        font-size: 21px;
+    }
+}
+
+.blogPost>p {
+    font-family: 'Montserrat', sans-serif;
+    color: #7E7E7E;
+    margin-top: 15px;
+    font-size: 14px;
+    letter-spacing: 3%;
+}
+
+@media (min-width:48em) {    
+    .blogPost>p {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+}
+
+
+/* Accessories shop section  */
+
+.acceShop{
+    background-color: var(--clr-rgray);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.acceShop-wrapper{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width:48em) {   
+    .acceShop{
+        padding-bottom: 100px;
+    }
+
+    .acceShop-wrapper{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width:64em) {
+    .acceShop-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+}
+
+.acceShopCard{
+    width: 343px;
+    height: 352px;
+    border-radius: var(--border-r);
+    position: relative;
+    margin-inline: auto;
+
+}
+
+.acceShopCard + .acceShopCard{
+    margin-top: 20px;
+}
+
+@media (min-width:64em) {
+    .acceShopCard + .acceShopCard{
+        margin-top: 10px;
+    }
+}
+
+@media (min-width:48em) {   
+    .acceShopCard{
+        width: 592px;
+        height: 398px;
+    }
+}
+
+
+.acceShopCard-detail{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-color: var(--clr-white);
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+
+@media (min-width:48em) {   
+    .acceShopCard-detail{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 26px;
+    }
+}
+
+.acceShopCard-detail>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width:48em) {  
+    .acceShopCard-detail>div{
+        align-items: flex-start; 
+    }
+}
+
+.acceShopCard-detail>div>h3{
+    font-size: 18px;
+    color: #000;
+    font-weight: var(--font-sb);
+}
+
+.acceShopCard-detail>div>div{
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+@media (min-width:48em) {  
+    .acceShopCard-detail>div>div{
+        margin-top: 15px; 
+    }
+}
+
+.acceShopCard-detail>div>div>img{
+    width: 12px;
+    margin-right: 7px;
+}
+
+.acceShopCard-detail>div>div>p{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.601);
+    
+}
+
+.acceShopCard-detail>a{
+    display: block;
+    padding: 18px 39px;
+    background-color: #000;
+    color: var(--clr-white);
+    font-size: 15px;
+    font-weight: var(--font-m);
+    border-radius: 5px;
+    margin-top: 13px;
+    text-transform: capitalize;
+}
+
+.acceShopCard-detail>a:hover{
+    background-color: var(--clr-red);
+}
+
+@media (min-width:48em) {
+    .acceShopCard-detail>a{
+        margin-top: 0px;
+
+    }    
+}
+
+/* check our delhi Button  */
+.checkBtn{
+    background-color: #000;
+    color: var(--clr-white);
+    font-size: 20px;
+    font-weight: var(--font-m);
+    width: 343px ;
+    height: 80px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    border-radius: var(--border-r);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.checkBtn:hover{
+    background-color: var(--clr-red);
+}
+
+@media (min-width:48em) {
+    .checkBtn{
+        width: 428px ;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+/* note  */
+
+.note{
+    background-color: #FBFBFB;
+    padding: 35px 14px;
+    border-radius: var(--border-r);
+}
+
+.note>h2{
+    font-size: 22px;
+    font-weight: var(--font-m);
+    color: #000;
+}
+
+
+
+.note>p{
+    color: #7B7B7B;
+    line-height: 160%;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.note> p+p{
+    margin-top: 14px;
+}
+
+@media (min-width:48em) {
+    .note{
+        padding: 60px 40px;
+    }
+
+    .note>h2{
+        font-size: 28px;
+    }
+
+    
+    .note>p{
+        font-size: 16px;
+        margin-top: 25px;
+    }
+
+    .note> p+p{
+        margin-top: 20px;
+    }
+}
+
+#extraText, #lessBtn{
+    display: none;
+}
+
+#moreBtn, #lessBtn{
+    color: var(--clr-red);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Do you Know Banner */
+
+.doYouKnowBanner{
+    position: relative;
+    height: 219px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cover{
+    background-image: url('./asset/image/DoYouKnowBanner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(35px);
+    width: 100%;
+    height: 219px;
+    overflow: hidden;
+    margin-top: 40px;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: -2;
+}
+
+.bg-container{
+    background-color: rgba(0, 0, 0, 0.403);
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media (min-width:48em) {
+
+    .doYouKnowBanner{
+        height: 250px;
+        display: flex;
+        align-items: center;
+    }
+    .cover{
+    background-image: url('./asset/image/DoYouKnowBannerD.png');
+    }
+
+    .bg-container{
+        padding-top: 76px;
+        padding-bottom: 76px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.doYouKnow-textArea{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (min-width:48em) {
+    .doYouKnow-textArea{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.doYouKnow-title{
+    font-size: 22px ;
+    font-weight: var(--font-sb);
+    color: var(--clr-white);
+}
+
+.doYouKnow-text{
+    color: var(--clr-white);
+}
+
+.doYouKnow-btn{
+    padding: 19px 47px ;
+    font-size: 14px;
+    letter-spacing: 2%;
+    background-color: var(--clr-white);
+    color: #000;
+    text-transform: capitalize;
+    border-radius: var(--border-r);
+    font-weight: var(--font-sb);
+    margin-top: 22px;
+    width: fit-content;
+}
+
+.doYouKnow-btn:hover{
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+}
+
+
+@media (min-width:48em) {
+    .doYouKnow-btn{
+        margin-inline: auto;
+        margin-top: 0;
+    }
+}
+
+/* footer  */
+
+footer{
+    margin-top: 50px ;
+    margin-bottom: 50px ;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+@media (min-width:48em) {
+    .footer-grid{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        gap: 60px;
+    } 
+}
+
+.one{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-bottom: 72px;
+}
+
+
+@media (min-width:48em) {
+    .one{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+
+.one>a{
+    display: block;
+}
+
+.one>a>img{
+    width: 86px;
+}
+
+.one>p{
+    font-size: 15px;
+    font-weight: var(--font-l);
+    color: #666666;
+    margin-top: 20px;
+}
+
+.socialLinks{
+    margin-top: 30px;
+}
+
+.link{
+    fill: rgba(0, 0, 0, 0.404);
+    cursor: pointer;
+}
+
+.link:hover{
+    fill: rgb(0, 0, 0);
+}
+
+.link+.link{
+    margin-left: 20px;
+}
+
+@media (min-width:48em) {
+    footer{
+        margin-top: 100px;
+    }
+
+    .two, .three{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        /* margin-left: 65px; */
+    }
+
+}
+
+
+.two>h4 , .three>h4{
+    font-size: 15px;
+    font-weight: var(--font-sb);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.pages>a , .bestLehanga>a, .bestPlaces>a, .artificialJewellery>a{
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #5E5E5E;
+}
+
+.bestLehanga , .artificialJewellery{
+    margin-top: 30px;
+}
+
+@media (min-width:48em) {
+    .bestLehanga , .artificialJewellery{
+        margin-top: 0;
+        margin-left: 65px;
+    }
+}
+
+.four{
+    border-top: 2px solid #E9E9E9;
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media (min-width:48em) {
+    .four{
+    margin-top: 100px;
+
+    }
+
+    .four-flex{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.sitemap, .term, .copyright{
+    display: block;
+    font-size: 15px;
+}
+
+.sitemap{
+    color: #000;
+    text-decoration: underline;
+    margin-top: 17px;
+}
+
+.term{
+    color: rgba(0, 0, 0, 0.603);
+    margin-top: 20px;
+}
+
+.copyright{
+    color: rgba(0, 0, 0, 0.608);
+    margin-top: 40px;
+}
+
+@media (min-width:48em) {
+    .term ,.copyright{
+        margin-top: 17px;
+    }
+
+
+}
+
+
+
