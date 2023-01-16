@@ -1,6 +1,6 @@
 
 // header bg changer 
-const header = document.getElementsByClassName("header-style");
+const header = document.getElementsByClassName("navBar");
 
 const headerBg = () => {
     if (
@@ -15,7 +15,9 @@ const headerBg = () => {
     
 window.addEventListener('scroll', headerBg)
 
+
 // slider functional code
+
 let slideIndex = 1;
 showDivs(slideIndex);
 
@@ -76,3 +78,15 @@ const hideText = () => {
 
 moreBtn.addEventListener('click', showText)
 lessBtn.addEventListener('click', hideText)
+
+// Navigation 
+
+const hamburger = document.getElementById('hamburger')
+const close = document.getElementById('close')
+
+const check = () => {
+    console.log('click');
+}
+
+
+hamburger.addEventListener('click', check)
