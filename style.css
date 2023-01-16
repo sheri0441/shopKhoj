@@ -162,7 +162,7 @@ img{
 
 .navBar{
     position: fixed;
-    top: 0rem;
+    top: 0px;
     left: 50%;
     width: 100%;
     z-index: 99;
@@ -518,6 +518,7 @@ nav>a:hover{
     padding-left: 36px;
     padding-top: 20px;
     padding-bottom: 20px;
+    height: 56px;
     width: 100%;
     background-color: transparent;
 }
@@ -1767,6 +1768,7 @@ h1>span{
 
 .doYouKnow-text{
     color: var(--clr-white);
+    font-size: 12px;
 }
 
 .doYouKnow-btn{
@@ -1780,6 +1782,7 @@ h1>span{
     font-weight: var(--font-sb);
     margin-top: 22px;
     width: fit-content;
+    font-size: 14px;
 }
 
 .doYouKnow-btn:hover{
@@ -1789,10 +1792,19 @@ h1>span{
 
 
 @media (min-width:76.25em) {
+    .doYouKnow-title{
+        font-size: 36px ;
+    }
+    .doYouKnow-text{
+        font-size: 16px;
+    }
+
     .doYouKnow-btn{
         margin-inline: auto;
         margin-top: 0;
+        font-size: 16px;
     }
+
 }
 
 /* footer  */
