@@ -161,13 +161,24 @@ img{
 
 
 .navBar{
-    position: fixed;
-    top: 0px;
-    left: 50%;
+    position: sticky;
+    margin-bottom: -121px;
+    top: -40px;
+    /* top: 0px;
+    left: 50%; */
     width: 100%;
     z-index: 99;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     max-width: 1440px;
+
+}
+
+@media (min-width:76.25em) {
+    .navBar{
+        margin-bottom: -132px;
+        top: -30px;
+    }
+    
 }
 
 .header-style{
