@@ -10,7 +10,6 @@ const headerBg = () => {
         } else {
             header[0].style.background = "#9597A1" ;
         }
-
 }
     
 window.addEventListener('scroll', headerBg)
