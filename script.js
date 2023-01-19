@@ -89,3 +89,20 @@ const check = () => {
 
 
 hamburger.addEventListener('click', check)
+
+
+
+// nav bar serach option 
+
+// const icon = document.getElementById('sb-icon-search');
+// const navSreahBar = document.getElementById('navSerachBar');
+
+// console.log(icon);
+
+// const openBar = () => {
+//     console.log('working');
+//     navSreahBar.style.display = "flex";
+//     icon.style.display = "none"
+// }
+
+// icon.addEventListener('click', openBar);
