@@ -88,7 +88,8 @@
         </section>
 
         <section class="section container">
-            <!-- watch video section start  -->
+            <div class="watch_listed">
+                <!-- watch video section start  -->
                 <section class="watchVideo">
                     <h2 class="sectionHeading">Watch video</h2>
                     <video class="howToVideo"
@@ -148,209 +149,415 @@
                 <section class="getLinked">
                     <h2 class="getLinked-title">Get Listed now</h2>
                     <form>
-                        <h3 class="formPart-title">Contact Information</h3>
+                        <div>
+                            <h3 class="formPart-title">Contact Information</h3>
+                            
+                            <input class="form_input" type="text" name="Your name" placeholder="Enter your Name" id="">
+                            <input class="form_input" type="tel" name="phone number" placeholder="Enter phone number" id="">
+                            <h3 class="formPart-title">Shop Information</h3>
+                            <input class="form_input" type="text" name="shopName" placeholder="Shop name" id="">
+                            <input class="form_input" type="text" name="market/mall name" placeholder="market / mall name" id="">
+                            <h4 class="checkBox-title">Category of Store (Tick the right boxes)</h4>
+                            <div class="form-Boxgroup">
+                                <div>
+                                    <input type="checkbox" name="category" id="garments" value="Garments/ReadytoWear" class="form-Box">
+                                    <label for="garments" class="form-Box_labels">Garments / Ready to Wear</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="category" id="Accessories" value="Accessories" class="form-Box">
+                                    <label for="Accessories" class="form-Box_labels">Accessories</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="category" id="Bag" value="Bag" class="form-Box">
+                                    <label for="Bag" class="form-Box_labels">Bag</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="category" id="Jewellery" value="Jewellery" class="form-Box">
+                                    <label for="Jewellery" class="form-Box_labels">Jewellery</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="category" id="Shoes" value="Shoes" class="form-Box">
+                                    <label for="Shoes" class="form-Box_labels">Shoes</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="category" id="DressMaterial" value="DressMaterial" class="form-Box">
+                                    <label for="DressMaterial" class="form-Box_labels">Dress Material</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="category" id="Handicraft" value="Handicraft" class="form-Box">
+                                    <label for="Handicraft" class="form-Box_labels">Handicraft</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="category" id="PersonalCare" value="Personal Care Products" class="form-Box">
+                                    <label for="PersonalCare" class="form-Box_labels">Personal Care Products</label>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                            <input class="form_input" type="text" name="Location and Address" placeholder="Location and Address" id="">
+                            <input class="form_input" type="text" name="Location and Address" placeholder="shop contact number" id="">
+                            <input class="form_input" type="text" name="Location and Address" placeholder="Direction" id="">
+                            <input class="form_input" type="email" name="Location and Address" placeholder="email address" id="">
+                            <input class="form_input" type="url" name="Location and Address" placeholder="website link" id="">
+                            <input class="form_input" type="url" name="Location and Address" placeholder="facebook link" id="">
+                            <input class="form_input" type="url" name="Location and Address" placeholder="twitter link" id="">
+                        </div>
                         
-                        <input class="form_input" type="text" name="Your name" placeholder="Enter your Name" id="">
-                        <input class="form_input" type="tel" name="phone number" placeholder="Enter phone number" id="">
-                        <h3 class="formPart-title">Shop Information</h3>
-                        <input class="form_input" type="text" name="shopName" placeholder="Shop name" id="">
-                        <input class="form_input" type="text" name="market/mall name" placeholder="market / mall name" id="">
-
-                        <h4 class="checkBox-title">Category of Store (Tick the right boxes)</h4>
-                        <div class="form-Boxgroup">
-                            <div>
-                                <input type="checkbox" name="category" id="garments" value="Garments/ReadytoWear" class="form-Box">
-                                <label for="garments" class="form-Box_labels">Garments / Ready to Wear</label>
+                        <div>
+                            <h3 class="formPart-title">Shop Details</h3>
+                            <h4 class="checkBox-title">What Does Your Shop Sell</h4>
+                            <div class="form-Boxgroup">
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Saree" value="Saree" class="form-Box">
+                                    <label for="Saree" class="form-Box_labels">Saree</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Lehenga" value="SalwarKameez" class="form-Box">
+                                    <label for="Lehenga" class="form-Box_labels">Salwar Kameez, Lehenga</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Bridal" value="Bridal" class="form-Box">
+                                    <label for="Bridal" class="form-Box_labels">Bridal Wear</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Skirts" value="Skirts" class="form-Box">
+                                    <label for="Skirts" class="form-Box_labels">Skirts</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Tops" value="Tops" class="form-Box">
+                                    <label for="Tops" class="form-Box_labels">Tops</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Shorts" value="Shorts" class="form-Box">
+                                    <label for="Shorts" class="form-Box_labels">Shorts</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Pant" value="Pant" class="form-Box">
+                                    <label for="Pant" class="form-Box_labels">Pant</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Shirt" value="Shirt" class="form-Box">
+                                    <label for="Shirt" class="form-Box_labels">Shirt</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Dhotis" value="Dhotis" class="form-Box">
+                                    <label for="Dhotis" class="form-Box_labels">Dhotis</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Kurtas" value="Kurtas" class="form-Box">
+                                    <label for="Kurtas" class="form-Box_labels">Kurtas</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Punjabi" value="Punjabi" class="form-Box">
+                                    <label for="Punjabi" class="form-Box_labels">Punjabi</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Sherwani" value="Sherwani" class="form-Box">
+                                    <label for="Sherwani" class="form-Box_labels">Sherwani</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Purses" value="Purses" class="form-Box">
+                                    <label for="Purses" class="form-Box_labels">Purses</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="SmallBags" value="SmallBags" class="form-Box">
+                                    <label for="SmallBags" class="form-Box_labels">Small Bags</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Totes" value="Totes" class="form-Box">
+                                    <label for="Totes" class="form-Box_labels">Totes</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="ShoppingBags" value="ShoppingBags" class="form-Box">
+                                    <label for="ShoppingBags" class="form-Box_labels">Shopping Bags</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Clutches" value="Clutches" class="form-Box">
+                                    <label for="Clutches" class="form-Box_labels">Clutches</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Neckless" value="Neckless" class="form-Box">
+                                    <label for="Neckless" class="form-Box_labels">Neckless</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="RealJewellery" value="Real Jewellery" class="form-Box">
+                                    <label for="RealJewellery" class="form-Box_labels">Real Jewellery</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="CostumeJewellery" value="Costume Jewellery" class="form-Box">
+                                    <label for="CostumeJewellery" class="form-Box_labels">Costume Jewellery</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Earings" value="Earings" class="form-Box">
+                                    <label for="Earings" class="form-Box_labels">Earings</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Bracelets" value="Bracelets" class="form-Box">
+                                    <label for="Bracelets" class="form-Box_labels">Bracelets</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Anklets" value="Anklets" class="form-Box">
+                                    <label for="Anklets" class="form-Box_labels">Anklets</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="BanglesPartywear" value="Bangles Party wear" class="form-Box">
+                                    <label for="BanglesPartywear" class="form-Box_labels">Bangles Party wear</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="WeddingShoes" value="Wedding Shoes" class="form-Box">
+                                    <label for="WeddingShoes" class="form-Box_labels">Wedding Shoes</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="HighHeels" value="High Heels" class="form-Box">
+                                    <label for="HighHeels" class="form-Box_labels">High Heels</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Casualwear" value="Casual wear" class="form-Box">
+                                    <label for="Casualwear" class="form-Box_labels">Casual wear</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Flats" value="Flats" class="form-Box">
+                                    <label for="Flats" class="form-Box_labels">Flats</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Jutis, Chappals, Ethnic Indian Shoes" value="Jutis" class="form-Box">
+                                    <label for="Jutis" class="form-Box_labels">Jutis, Chappals, Ethnic Indian Shoes</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Sportswear" value="Sports wear" class="form-Box">
+                                    <label for="Sportswear" class="form-Box_labels">Sports wear</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Dressmaterial" value="Dress material" class="form-Box">
+                                    <label for="Dressmaterial" class="form-Box_labels">Dress material</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Western" value="Western wear dresses, skirts, tops, trousers" class="form-Box">
+                                    <label for="Western" class="form-Box_labels">Western wear dresses, skirts, tops, trousers</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shopSell" id="Others" value="Others" class="form-Box">
+                                    <label for="Others" class="form-Box_labels">Others</label>
+                                </div>
                             </div>
-                            <div>
-                                <input type="checkbox" name="category" id="Accessories" value="Accessories" class="form-Box">
-                                <label for="Accessories" class="form-Box_labels">Accessories</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="category" id="Bag" value="Bag" class="form-Box">
-                                <label for="Bag" class="form-Box_labels">Bag</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="category" id="Jewellery" value="Jewellery" class="form-Box">
-                                <label for="Jewellery" class="form-Box_labels">Jewellery</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="category" id="Shoes" value="Shoes" class="form-Box">
-                                <label for="Shoes" class="form-Box_labels">Shoes</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="category" id="DressMaterial" value="DressMaterial" class="form-Box">
-                                <label for="DressMaterial" class="form-Box_labels">Dress Material</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="category" id="Handicraft" value="Handicraft" class="form-Box">
-                                <label for="Handicraft" class="form-Box_labels">Handicraft</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="category" id="PersonalCare" value="Personal Care Products" class="form-Box">
-                                <label for="PersonalCare" class="form-Box_labels">Personal Care Products</label>
-                            </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                        </div>
-                        <input class="form_input" type="text" name="Location and Address" placeholder="Location and Address" id="">
-                        <input class="form_input" type="text" name="Location and Address" placeholder="shop contact number" id="">
-                        <input class="form_input" type="text" name="Location and Address" placeholder="Direction" id="">
-                        <input class="form_input" type="email" name="Location and Address" placeholder="email address" id="">
-                        <input class="form_input" type="url" name="Location and Address" placeholder="website link" id="">
-                        <input class="form_input" type="url" name="Location and Address" placeholder="facebook link" id="">
-                        <input class="form_input" type="url" name="Location and Address" placeholder="twitter link" id="">
-
-                        <h3 class="formPart-title">Shop Details</h3>
-                        <h4 class="checkBox-title">What Does Your Shop Sell</h4>
-                        <div class="form-Boxgroup">
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Saree" value="Saree" class="form-Box">
-                                <label for="Saree" class="form-Box_labels">Saree</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Lehenga" value="SalwarKameez" class="form-Box">
-                                <label for="Lehenga" class="form-Box_labels">Salwar Kameez, Lehenga</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Bridal" value="Bridal" class="form-Box">
-                                <label for="Bridal" class="form-Box_labels">Bridal Wear</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Skirts" value="Skirts" class="form-Box">
-                                <label for="Skirts" class="form-Box_labels">Skirts</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Tops" value="Tops" class="form-Box">
-                                <label for="Tops" class="form-Box_labels">Tops</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Shorts" value="Shorts" class="form-Box">
-                                <label for="Shorts" class="form-Box_labels">Shorts</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Pant" value="Pant" class="form-Box">
-                                <label for="Pant" class="form-Box_labels">Pant</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Shirt" value="Shirt" class="form-Box">
-                                <label for="Shirt" class="form-Box_labels">Shirt</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Dhotis" value="Dhotis" class="form-Box">
-                                <label for="Dhotis" class="form-Box_labels">Dhotis</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Kurtas" value="Kurtas" class="form-Box">
-                                <label for="Kurtas" class="form-Box_labels">Kurtas</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Punjabi" value="Punjabi" class="form-Box">
-                                <label for="Punjabi" class="form-Box_labels">Punjabi</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Sherwani" value="Sherwani" class="form-Box">
-                                <label for="Sherwani" class="form-Box_labels">Sherwani</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Purses" value="Purses" class="form-Box">
-                                <label for="Purses" class="form-Box_labels">Purses</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="SmallBags" value="SmallBags" class="form-Box">
-                                <label for="SmallBags" class="form-Box_labels">Small Bags</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Totes" value="Totes" class="form-Box">
-                                <label for="Totes" class="form-Box_labels">Totes</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="ShoppingBags" value="ShoppingBags" class="form-Box">
-                                <label for="ShoppingBags" class="form-Box_labels">Shopping Bags</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Clutches" value="Clutches" class="form-Box">
-                                <label for="Clutches" class="form-Box_labels">Clutches</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Neckless" value="Neckless" class="form-Box">
-                                <label for="Neckless" class="form-Box_labels">Neckless</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="RealJewellery" value="Real Jewellery" class="form-Box">
-                                <label for="RealJewellery" class="form-Box_labels">Real Jewellery</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="CostumeJewellery" value="Costume Jewellery" class="form-Box">
-                                <label for="CostumeJewellery" class="form-Box_labels">Costume Jewellery</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Earings" value="Earings" class="form-Box">
-                                <label for="Earings" class="form-Box_labels">Earings</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Bracelets" value="Bracelets" class="form-Box">
-                                <label for="Bracelets" class="form-Box_labels">Bracelets</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Anklets" value="Anklets" class="form-Box">
-                                <label for="Anklets" class="form-Box_labels">Anklets</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="BanglesPartywear" value="Bangles Party wear" class="form-Box">
-                                <label for="BanglesPartywear" class="form-Box_labels">Bangles Party wear</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="WeddingShoes" value="Wedding Shoes" class="form-Box">
-                                <label for="WeddingShoes" class="form-Box_labels">Wedding Shoes</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="HighHeels" value="High Heels" class="form-Box">
-                                <label for="HighHeels" class="form-Box_labels">High Heels</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Casualwear" value="Casual wear" class="form-Box">
-                                <label for="Casualwear" class="form-Box_labels">Casual wear</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Flats" value="Flats" class="form-Box">
-                                <label for="Flats" class="form-Box_labels">Flats</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Jutis, Chappals, Ethnic Indian Shoes" value="Jutis" class="form-Box">
-                                <label for="Jutis" class="form-Box_labels">Jutis, Chappals, Ethnic Indian Shoes</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Sportswear" value="Sports wear" class="form-Box">
-                                <label for="Sportswear" class="form-Box_labels">Sports wear</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Dressmaterial" value="Dress material" class="form-Box">
-                                <label for="Dressmaterial" class="form-Box_labels">Dress material</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Western" value="Western wear dresses, skirts, tops, trousers" class="form-Box">
-                                <label for="Western" class="form-Box_labels">Western wear dresses, skirts, tops, trousers</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="shopSell" id="Others" value="Others" class="form-Box">
-                                <label for="Others" class="form-Box_labels">Others</label>
-                            </div>
+                            <input class="form_input" type="number" name="Location and Address" placeholder="minimum price" id="">
+                            <input class="form_input" type="number" name="Location and Address" placeholder="maximum price" id="">
+                            <input class="form_input" type="number" name="Location and Address" placeholder="give prices of some stuff in the shop" id="">
                         </div>
 
-                        <input class="form_input" type="number" name="Location and Address" placeholder="minimum price" id="">
-                        <input class="form_input" type="number" name="Location and Address" placeholder="maximum price" id="">
-                        <input class="form_input" type="number" name="Location and Address" placeholder="give prices of some stuff in the shop" id="">
+                        <div>
+                            <h3 class="formPart-title">Payment</h3>
+                            <div class="form-radio_group">
+                                <div>
+                                    <input type="radio" name="paymentMethod" id="Card" class="form-radio" value="creditCard">
+                                    <label for="Card" class="form-radio_label">Credit Card</label>
+    
+                                </div>
+                                <div>
+                                    <input type="radio" name="paymentMethod" id="cash" class="form-radio" value="Cash">
+                                    <label for="cash" class="form-radio_label">Cash Only</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="paymentMethod" id="both" class="form-radio" value="both">
+                                    <label for="both" class="form-radio_label">Both</label>
+                                </div>
+                            </div>
+                            <div class="form-radio_group2">
+                                <h4 class="form-radio_title">Can Customers Bargain</h4>
+                                <div class="form-radio_container">
+                                    <div>
+                                        <input type="radio" name="bargain" id="bargainYes" class="form-radio" value="yes">
+                                        <label for="bargainYes" class="form-radio_label">yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="bargain" id="bargainNo" class="form-radio" value="no">
+                                        <label for="bargainNo" class="form-radio_label">no</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-radio_group2">
+                                <h4 class="form-radio_title">Can they reduce the price if they buy more products</h4>
+                                <div class="form-radio_container">
+                                    <div>
+                                        <input type="radio" name="reducePrice" id="reduceYes" class="form-radio" value="yes">
+                                        <label for="reduceYes" class="form-radio_label">yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="reducePrice" id="reduceNo" class="form-radio" value="no">
+                                        <label for="reduceNo" class="form-radio_label">no</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-radio_group2">
+                                <h4 class="form-radio_title">Can Customers Exchange Items</h4>
+                                <div class="form-radio_container">
+                                    <div>
+                                        <input type="radio" name="exchangeItems" id="exchangeYes" class="form-radio" value="yes">
+                                        <label for="exchangeYes" class="form-radio_label">yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="exchange" id="exchangeNo" class="form-radio" value="no">
+                                        <label for="exchangeNo" class="form-radio_label">no</label>
+                                    </div>
+                                </div>
+                                <input class="form_input" type="number" name="dayExchangeLimit" placeholder="If Yes in How many days" id="">
+                            </div>
+                        </div>
 
-                        <h3 class="formPart-title">Payment</h3>
+                        <div>
+                            <h3 class="formPart-title">Shop Review</h3>
+                            <textarea name="shopDescription" class="form_input" id="" cols="30" rows="4" placeholder="How would you best describe the shop / products"></textarea>
+                            <textarea name="comments/remark" class="form_input" id="" cols="30" rows="4" placeholder="Other Comments / Remark"></textarea>
+                        </div>
+
+                        <div>
+                            <h3 class="formPart-title">Upload Photos & Videos if any</h3>
+                            <input class="form_file" type="file" name="photo/videos" id="" multiple>
+                        </div>
+
+                        <div class="form_terms">
+                            <input type="checkbox" name="shopSell" id="Saree" value="Saree" class="form-Box" required>
+                            <label for="Saree" class="form-Box_labels">We accept Shopkhoj terms & Conditions</label>
+
+                        </div>
+
+                        <div class="form_btns">
+                            <button class="form-submitBtn" type="submit">submit</button>
+                            <button class="form-resetBtn"  type="reset">reset</button>
+                        </div>
                     </form>
+
                 </section>
             <!-- get listed section end  -->
+            </div>
+
+
+            <section class="section">
+                <div class="container">
+                    <h2 class="sectionTitle_25">View our latest Blogs</h2>
+                </div>
+                <div class="blogCard_horizontal-container">
+                    <div class="cardHorizontal_container" id="cardHorizontal_container">
+                        <a href="#" class="blogPostCard">
+                            <img src="../asset/image/Blog/2.png" alt="">
+                            <div class="blogPostCard-detail">
+                                <div>
+                                    <img src="../asset/icon/calender.svg" alt="">
+                                    <p>22, Nov 2022</p>
+                                </div>
+                                <div>
+                                    <img src="../asset/icon/person.svg" alt="">
+                                    <p>Guest Blogger </p>
+                                </div>
+                                <div>
+                                    <img src="../asset/icon/view.svg" alt="">
+                                    <p><span>2245</span> views</p>
+                                </div>
+                            </div>
+                            <h3>Top Diwali Gift Ideas For 
+                                Friends & Family</h3>
+                            <p>Lorem Ipsum is simply dummy text of 
+                                Lorem Ipsum has been the industry's</p>
+                        </a>
+                        <a href="#" class="blogPostCard">
+                            <img src="../asset/image/Blog/2.png" alt="">
+                            <div class="blogPostCard-detail">
+                                <div>
+                                    <img src="../asset/icon/calender.svg" alt="">
+                                    <p>22, Nov 2022</p>
+                                </div>
+                                <div>
+                                    <img src="../asset/icon/person.svg" alt="">
+                                    <p>Guest Blogger </p>
+                                </div>
+                                <div>
+                                    <img src="../asset/icon/view.svg" alt="">
+                                    <p><span>2245</span> views</p>
+                                </div>
+                            </div>
+                            <h3>Top Diwali Gift Ideas For 
+                                Friends & Family</h3>
+                            <p>Lorem Ipsum is simply dummy text of 
+                                Lorem Ipsum has been the industry's</p>
+                        </a>
+                        <a href="#" class="blogPostCard">
+                            <img src="../asset/image/Blog/2.png" alt="">
+                            <div class="blogPostCard-detail">
+                                <div>
+                                    <img src="../asset/icon/calender.svg" alt="">
+                                    <p>22, Nov 2022</p>
+                                </div>
+                                <div>
+                                    <img src="../asset/icon/person.svg" alt="">
+                                    <p>Guest Blogger </p>
+                                </div>
+                                <div>
+                                    <img src="../asset/icon/view.svg" alt="">
+                                    <p><span>2245</span> views</p>
+                                </div>
+                            </div>
+                            <h3>Top Diwali Gift Ideas For 
+                                Friends & Family</h3>
+                            <p>Lorem Ipsum is simply dummy text of 
+                                Lorem Ipsum has been the industry's</p>
+                        </a>
+                        <a href="#" class="blogPostCard">
+                            <img src="../asset/image/Blog/2.png" alt="">
+                            <div class="blogPostCard-detail">
+                                <div>
+                                    <img src="../asset/icon/calender.svg" alt="">
+                                    <p>22, Nov 2022</p>
+                                </div>
+                                <div>
+                                    <img src="../asset/icon/person.svg" alt="">
+                                    <p>Guest Blogger </p>
+                                </div>
+                                <div>
+                                    <img src="../asset/icon/view.svg" alt="">
+                                    <p><span>2245</span> views</p>
+                                </div>
+                            </div>
+                            <h3>Top Diwali Gift Ideas For 
+                                Friends & Family</h3>
+                            <p>Lorem Ipsum is simply dummy text of 
+                                Lorem Ipsum has been the industry's</p>
+                        </a>
+                    </div>
+                    <div class="cardHorizontal_arrow">
+                        <svg class="cardHorizontal_arrow-left" width="38" height="16" viewBox="0 0 38 16" fill="none" id="cardHorizontal_arrow-left">
+                            <path d="M0.29401 8.70711C-0.0965118 8.31658 -0.0965118 7.68342 0.29401 7.29289L6.65797 0.928932C7.0485 0.538408 7.68166 0.538408 8.07219 0.928932C8.46271 1.31946 8.46271 1.95262 8.07219 2.34315L2.41533 8L8.07219 13.6569C8.46271 14.0474 8.46271 14.6805 8.07219 15.0711C7.68166 15.4616 7.0485 15.4616 6.65797 15.0711L0.29401 8.70711ZM37.5742 9H1.00112V7H37.5742V9Z" fill="black"/>
+                        </svg>
+                        <svg class="cardHorizontal_arrow-right" width="39" height="16" viewBox="0 0 39 16" fill="none" id="cardHorizontal_arrow-right">
+                            <path d="M37.7802 8.70711C38.1707 8.31658 38.1707 7.68342 37.7802 7.29289L31.4162 0.928932C31.0257 0.538408 30.3926 0.538408 30.002 0.928932C29.6115 1.31946 29.6115 1.95262 30.002 2.34315L35.6589 8L30.002 13.6569C29.6115 14.0474 29.6115 14.6805 30.002 15.0711C30.3926 15.4616 31.0257 15.4616 31.4162 15.0711L37.7802 8.70711ZM0.5 9H37.0731V7H0.5V9Z" fill="black"/>
+                            </svg>
+                    </div>
+                </div>
+
+            </section>
+            <div class="container">           
+                <a href="#" class="checkBtn">View our videos</a>
+                <article class="note">
+                    <h2>Looking for India Shopping</h2>
+                    <p>India is a shopper&apos;s paradise offering a wealth of products and an incredible range to choose from. In other words,be it the most traditional jewellery to go with your Kanjeevaram saree, or that perfect lamp to enhance your home, India has it all. For instance, each of India&apos;s 29 States and 7 Union Territories has its unique offering of textiles and clothing, jewellery, and handicrafts. As a matter of fact, it can be overwhelming to navigate all that India has to offer.<span id="moreBtn">Read more</span>      
+                    </p>
+                    <p id="extraText">For instance, knowing where to shop for specific products requires skill, inside knowledge and most importantly, the time. Luckily, we have that! Gathered over decades of shopping in India, we provide local knowledge on over 1000+ Shops, Markets and Malls. Above all, we currently have information on 7 different cities. <span id="lessBtn">Read less</span></p>
+                </article>
+                <article class="newsLetter">
+                    <div>
+                        <h2>SIGN UP FOR NEWSLETTER</h2>
+                        <p>Be the First to Know. Sign up to newsletter today</p>
+                    </div>
+                    <form>
+                        <input class="emailInput" type="email" name="" id="" placeholder="Please enter your email address" required>
+                        <button type="submit" class="submitBtn">subscribe</button>
+                    </form>
+                </article>
+            </div>
         </section>
     </main>
     
@@ -444,6 +651,8 @@
 
     </footer>
 
-    <script src="../script.js"></script>  
+    <script src="../global.js"></script>  
+    <script src="../Scripts/horizontalScrollCard.js"></script>  
+
 </body>
 </html>
