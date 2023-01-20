@@ -2720,6 +2720,11 @@ footer{
     }
 }
 
+
+
+
+
+
 .cityPage_section-markets{
     display: grid;
     gap: 16px;
@@ -2746,7 +2751,7 @@ footer{
         gap: 32px;
     }
 
-    .cityPage_section-markets> h2 +.shopBox{
+    .cityPage_section-markets> h2 +.bestMarket-card_city{
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row: 2/3;
@@ -2794,6 +2799,530 @@ footer{
         grid-row-end:2 ;
     }
 }
+
+
+.bestMarket-card_city--first{
+    width: 100%;
+    position: relative;
+    border-radius: var(--border-r);
+    overflow: hidden;
+}
+
+.bestMarket-card_city{
+    width: 100%;
+    position: relative;
+    border-radius: var(--border-r);
+    overflow: hidden;
+}
+
+.bestMarket-card_city--first>img{
+    object-fit: cover;
+}
+
+.bestMarket-card_city>img{
+    object-fit: cover;
+}
+
+.bestMarket-card_city-text--first{
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    border-radius: var(--border-r);
+    padding-bottom: 24px;
+    padding-inline: 21px;
+    justify-content: space-between;
+}
+
+
+.bestMarket-card_city-text{
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    border-radius: var(--border-r);
+    padding-bottom: 24px;
+    padding-inline: 21px;
+    justify-content: space-between;
+}
+
+.bestMarket-card_city-text--first>div>h3{
+    font-size: 24px;
+    color: var(--clr-white);
+}
+
+.bestMarket-card_city-text--first>div>p{
+    font-size: 14px;
+    color: var(--clr-white);
+    text-transform: capitalize;
+}
+
+.bestMarket-card_city-text--first>a{
+    width: 40px;
+}
+
+
+.bestMarket-card_city-text>div>h3{
+    font-size: 24px;
+    color: var(--clr-white);
+}
+
+.bestMarket-card_city-text>div>p{
+    font-size: 14px;
+    color: var(--clr-white);
+    text-transform: capitalize;
+}
+
+.bestMarket-card_city-text>a{
+    width: 40px;
+}
+
+
+.bestMarket-card_city-text>a:hover ,
+.bestMarket-card_city-text--first>a:hover{
+    transform: scale(1.5);
+}
+
+
+
+@media (min-width:76.25em) {
+    .bestMarket-card_city--first{
+
+        grid-column: 1/4;
+    }  
+
+    .bestMarket-card_city-text--first{
+        padding-bottom: 40px;
+        padding-inline: 30px;
+    }
+
+
+    .bestMarket-card_city-text{
+        padding-bottom: 24px;
+        padding-right: 30px;
+        padding-left:20px ;
+    }
+
+    .bestMarket-card_city-text--first>div>h3{
+        font-size: 36px;
+    }
+
+    .bestMarket-card_city-text--first>div>p{
+        font-size: 20px;
+    }
+    
+    .bestMarket-card_city-text--first>a{
+        width: 60px;
+    }
+    
+    .bestMarket-card_city-text>div>p{
+        font-size: 18px;
+    }
+
+    .bestMarket-card_city-text>a{
+        width: 36px;
+    }
+}
+
+
+.cityPage_section-mall{
+    margin-top: 64px;
+    display: grid;
+    width: 343px;
+    margin-inline: auto;
+    gap: 16px;
+}
+
+@media (min-width:76.25em) {
+    .cityPage_section-mall{
+        width: 100%;
+        gap: 32px;
+        grid-template-columns: 1fr 1fr;
+        grid-row: auto auto auto;
+        margin-top: 100px;
+    }
+
+    .cityPage_section-mall>h2{
+        grid-column: 1/2;
+    }
+
+    .cityPage_section-mall>.cityPage_sectionBtn{
+        grid-column: 2/3;
+    }
+
+    .cityPage_section-mall>h2+div{
+        grid-row: 2/4;
+        grid-column: 1/2;
+    }
+
+    .bestMall-sec{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        height: 284px;
+    }
+
+    .bestMall-third{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        height: 284px;
+    }
+}
+
+
+.bestMall-card_city{
+    width: 100%;
+    position: relative;
+    border-radius: var(--border-r);
+    overflow: hidden;
+}
+
+.bestMall-card_city>img{
+    object-fit: cover;
+}
+
+.bestMall-card_city--text{
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    border-radius: var(--border-r);
+    padding-bottom: 24px;
+    padding-inline: 21px;
+    justify-content: space-between;
+}
+
+.bestMall-card_city--text>div>h3{
+    font-size: 24px;
+    color: var(--clr-white);
+}
+
+.bestMall-card_city--text>div>p{
+    font-size: 14px;
+    color: var(--clr-white);
+    text-transform: capitalize;
+}
+
+.bestMall-card_city--text>a{
+    width: 40px;
+}
+.bestMall-card_city--text>a:hover{
+    transform: scale(1.5);
+}
+
+/* .bestMall-card_city--text */
+
+
+@media (min-width:76.25em) {
+    .bestMall-card_city--text{
+        padding-left:35px;
+        padding-right:50px;
+        padding-bottom:25px;
+    }
+
+    .bestMall-card_city--text>div>h3{
+        font-size: 32px;
+    }
+    
+    .bestMall-card_city--text>div>p{
+        font-size: 20px;
+    }
+    
+    .bestMall-card_city--text>a{
+        width: 56px;
+    }
+}
+
+
+.bestShop-section_cityPage{
+    margin-top: 64px;
+    display: grid;
+    width: 343px;
+    margin-inline: auto;
+    gap: 16px;
+}
+
+
+
+.bestShop-card_city{
+    width: 100%;
+    position: relative;
+    border-radius: var(--border-r);
+    overflow: hidden;
+    height: 345px;
+}
+
+.bestShop-card_city>img{
+    object-fit: cover;
+}
+
+.bestShop-card_city--text{
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    border-radius: var(--border-r);
+    padding-bottom: 24px;
+    padding-inline: 21px;
+    justify-content: space-between;
+}
+
+.bestShop-card_city--text>div>h3{
+    font-size: 24px;
+    color: var(--clr-white);
+}
+
+.bestShop-card_city--text>div>p{
+    font-size: 14px;
+    color: var(--clr-white);
+    text-transform: capitalize;
+}
+
+.bestShop-card_city--text>a{
+    width: 40px;
+}
+.bestShop-card_city--text>a:hover{
+    transform: scale(1.5);
+}
+
+@media (min-width:76.25em) {
+    .bestShop-section_cityPage{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        width: 100%;
+    }
+
+    .bestShop-section_cityPage>h2{
+        grid-column: 1/4;
+    }
+
+    .bestShop-section_cityPage>.cityPage_sectionBtn{
+        grid-column: 4/5;
+    }
+
+    .bestShop-card_city--text{
+        padding-bottom: 25px;
+        padding-left: 15px;
+        padding-right:12px ;
+    }
+    
+    .bestShop-card_city--text>div>h3{
+        font-size: 20px;
+    }
+    
+    .bestShop-card_city--text>div>p{
+        font-size: 15px;
+    }
+    
+    .bestShop-card_city--text>a{
+        width: 26px;
+    }
+
+    .bestShop_first{
+        grid-column: 1/3;
+        grid-row: 2/4;
+        height: 100%;
+    }
+
+    .bestShop_first>.bestShop-card_city--text{
+        padding-bottom: 44px;
+        padding-left: 25px;
+        padding-right:40px ;
+    }
+    
+    .bestShop_first>.bestShop-card_city--text>div>h3{
+        font-size: 36px;
+    }
+    
+    .bestShop_first>.bestShop-card_city--text>div>p{
+        font-size: 20px;
+    }
+    
+    .bestShop_first>.bestShop-card_city--text>a{
+        width: 60px;
+    }
+}
+
+.mapForMobile-section{
+    margin-top: 64px;
+    width: 343px;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    margin-inline: auto;
+    padding: 24px 32px;
+}
+
+.mapForMobile-section>h2{
+    font-size: 20px;
+    font-weight: var(--font-b);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media (min-width:76.25em) {
+    .mapForMobile-section{
+        display: none;
+    }
+
+    .bestShop_clothing-m{
+        display: none;
+    }
+
+    .bestShop_cloth-D{
+        background-color: var(--clr-white);
+    }
+}
+
+
+.bestShopCard_clothing-citypage{
+    position: relative;
+    padding: 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: var(--border-r);
+    width: 384px;
+    height: 391px;
+    display: block;
+}
+
+.bestShopCard_clothing_cityPage-title{
+    font-size: 24px;
+    font-weight: var(--font-m);
+    color: #000;
+    margin-top: 15px;
+}
+
+.bestShop_clothing-citypage-D-wrapper{
+    display: none;
+    justify-content: space-between;
+}
+
+.bestShopCard_clothing_cityPage-title+div{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.bestShopCard_clothing_cityPage-title+div>img{
+    width: 15px;
+    margin-right: 7px;
+}
+
+.bestShopCard_clothing_cityPage-title+div>img+p{
+    color: rgba(0, 0, 0, 0.603);
+}
+
+@media (min-width:76.25em) {
+    .bestShop_clothing-citypage-D-wrapper{
+        display: flex;
+    }
+}
+
+/* 
+
+.shopBox-wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 13px;
+    margin-inline:auto ;
+}
+
+@media (min-width:76.25em) {
+    .shopBox-wrapper{
+        gap:  32px;
+    }
+}
+
+.shopBox{
+    width: 100%;
+    position: relative;
+    border-radius: var(--border-r);
+    overflow: hidden;
+}
+
+.shopBox>img{
+    object-fit: contain;
+}
+
+.shopBox:first-child{
+    grid-row-start:1 ;
+    grid-row-end:3 ;
+}
+
+
+
+
+
+.shopBox-text{
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    border-radius: var(--border-r);
+    padding-bottom: 17px;
+    padding-left: 6px;
+    padding-right: 2px;
+    justify-content: space-between;
+}
+
+@media (min-width:76.25em) {
+    .shopBox-text{
+        padding-bottom: 40px;
+        padding-left: 35px;
+        padding-right: 50px;
+    }
+}
+
+.shopBox-text>div>h3{
+    font-size: 12px;
+    color: var(--clr-white);
+}
+.shopBox-text>div>p{
+    font-size: 10px;
+    color: var(--clr-white);
+}
+
+.shopBox-text>a{
+    width: 26px;
+}
+
+.shopBox-text>a:hover{
+    transform: scale(1.5);
+}
+
+@media (min-width:76.25em) {
+    .shopBox-text>div>h3{
+        font-size: 32px;
+    }
+
+    .shopBox-text>div>p{
+        font-size: 20px;
+    }
+    
+    .shopBox-text>a{
+        width: 56px;
+    }
+} */
 
 
 
