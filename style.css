@@ -2746,9 +2746,9 @@ footer{
         gap: 32px;
     }
 
-    .cityPage_section-markets>.shopBox:first-child{
-        /* grid-column-start: 1;
-        grid-column-end: 4; */
+    .cityPage_section-markets> h2 +.shopBox{
+        grid-column-start: 1;
+        grid-column-end: 4;
         grid-row: 2/3;
     }
 
