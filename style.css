@@ -2405,7 +2405,10 @@ footer{
 
   .form-radio_group{
     display: flex;
-    justify-content: space-between;
+  }
+
+  .form-radio_group> div+div{
+    margin-left: 20px;
   }
 
   .form-radio{
