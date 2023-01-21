@@ -44,6 +44,192 @@ img{
 
 /* ----utility classes start---- */
 
+.menu{
+    position: absolute;
+    background: rgb(0, 0, 0);
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    min-height: 110vh;
+    padding-top: 50px;
+    display: none;
+}
+.topBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuLogo{
+    width: 55px;
+}
+
+.menuClose{
+    width: 28px;
+    cursor: pointer;
+}
+
+.menuClose:hover>circle{
+    fill: var(--clr-white);
+}
+
+.menuClose:hover>path{
+    fill: var(--clr-red);
+}
+
+.bottomBtn{
+    display: grid;
+    margin-inline: auto;
+    width: 275px;
+    margin-top: 72px;
+}
+
+.menu_copyright{
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.601);
+    margin-top: 15px;
+    grid-row: 3/4;
+}
+
+.menu_term{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.601);
+    text-align: center;
+    margin-top: 30px;
+    grid-row: 2/3;
+}
+
+.menu_term:hover{
+    color: var(--clr-white);
+}
+
+@media (min-width:76.25em) {
+    .menu{
+        padding-top: 40px;
+    }
+
+    .menuClose{
+        width: 76px;
+    }
+
+    
+
+    .menu_d{
+        display: flex;
+        flex-direction: column;
+        height: 430px;
+        position: relative;
+
+    }
+
+    .bottomBtn{
+        width: 100%;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        align-items: center;
+        margin-top: auto;
+        /* align-self: flex-end; */
+        position: absolute;
+        bottom: -150px;
+    }
+
+    .menu_copyright{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        margin-top: 0px;
+
+    }
+
+    .menu_term{
+        grid-row: 1/2;
+        grid-column: 3/4;
+        margin-top: 0px;
+        margin-left: auto;
+
+    }
+}
+
+.menuSocialLink{
+    fill: var(--clr-white);
+    opacity: 0.6;
+    width: 28px;
+}
+
+.menuSocialLink + .menuSocialLink{
+    margin-left: 19px;
+}
+
+.menu_socialLinks{
+    margin-inline: auto;
+    margin-top: auto;
+}
+
+.menuSocialLink:hover{
+    opacity: 1;
+}
+
+.nav{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width:76.25em) {
+    .menu_socialLinks{
+        margin-top: 0;
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .nav{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 823px;
+        margin-inline: auto;
+    }
+}
+
+
+
+.navlink{
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: var(--font-sb);
+    color: rgba(255, 255, 255, 0.601);
+    text-transform: capitalize;
+}
+
+#dropDown{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    cursor: pointer;
+}
+#dropDown>p{
+    font-size: 24px;
+    font-weight: var(--font-sb);
+    color: rgba(255, 255, 255, 0.601);
+    text-transform: capitalize;
+    margin-right: 14px;
+}
+
+.navlink:hover, #dropDown>p:hover, .cityLink:hover{
+    color: var(--clr-white);
+}
+
+#cites>div{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.cityLink{
+    color: #6D6D6D;
+    margin-top: 15px;
+}
+
 /* container  */
 
 .container{
@@ -1736,8 +1922,11 @@ h1>span{
     background-color: rgba(0, 0, 0, 0.403);
     width: 100%;
     height: 100%;
-    padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.bg-container{
+    padding-top: 30px;
 }
 
 
@@ -1753,7 +1942,7 @@ h1>span{
     }
 
     .bg-container{
-        padding-top: 76px;
+        padding-top: 67px;
         padding-bottom: 76px;
         display: flex;
         justify-content: space-between;
@@ -2598,6 +2787,7 @@ footer{
     overflow-x: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    scroll-behavior: smooth;
   }
 
   .cardHorizontal_container>.blogPostCard{
@@ -3204,7 +3394,7 @@ footer{
     font-size: 24px;
     font-weight: var(--font-m);
     color: #000;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .bestShop_clothing-citypage-D-wrapper{
@@ -3233,97 +3423,241 @@ footer{
     }
 }
 
-/* 
 
-.shopBox-wrapper{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    gap: 13px;
-    margin-inline:auto ;
+/* shop Khoj recommended secion  */
+
+.cityPage_extra-shopKhoj_title{
+    margin-bottom: 0%;
 }
 
-@media (min-width:76.25em) {
-    .shopBox-wrapper{
-        gap:  32px;
-    }
-}
-
-.shopBox{
-    width: 100%;
-    position: relative;
-    border-radius: var(--border-r);
-    overflow: hidden;
-}
-
-.shopBox>img{
-    object-fit: contain;
-}
-
-.shopBox:first-child{
-    grid-row-start:1 ;
-    grid-row-end:3 ;
-}
-
-
-
-
-
-.shopBox-text{
-    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: flex-end;
-    border-radius: var(--border-r);
-    padding-bottom: 17px;
-    padding-left: 6px;
-    padding-right: 2px;
-    justify-content: space-between;
-}
-
-@media (min-width:76.25em) {
-    .shopBox-text{
-        padding-bottom: 40px;
-        padding-left: 35px;
-        padding-right: 50px;
-    }
-}
-
-.shopBox-text>div>h3{
+.shopKhoj-recommed_sub{
     font-size: 12px;
-    color: var(--clr-white);
-}
-.shopBox-text>div>p{
-    font-size: 10px;
-    color: var(--clr-white);
-}
-
-.shopBox-text>a{
-    width: 26px;
-}
-
-.shopBox-text>a:hover{
-    transform: scale(1.5);
+    color: rgba(0, 0, 0, 0.597);
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    width: 322px;
+    margin-inline: auto;
 }
 
 @media (min-width:76.25em) {
-    .shopBox-text>div>h3{
-        font-size: 32px;
-    }
-
-    .shopBox-text>div>p{
+    .shopKhoj-recommed_sub{
         font-size: 20px;
+        width: 810px;
+        margin-top: 25px;
+        margin-bottom: 60px;
     }
-    
-    .shopBox-text>a{
-        width: 56px;
-    }
-} */
+}
+
+/* Best Shops for Handicrafts */
+
+.bestShop_handCard-cityPage{
+    display: block;
+    width: 296px;
+    height: 350px;
+    padding: 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    margin-inline: auto;
+}
+
+.bestShop_handCard-cityPage+.bestShop_handCard-cityPage{
+    margin-top: 20px;
+}
+
+.bestShop_handCard-cityPage>div{
+    position: relative;
+}
+
+.bestShop_handCard-cityPage_title{
+    color: #000;
+    font-weight: var(--font-m);
+    font-size: 18px;
+    margin-top:10px;
+}
+
+.bestShop_handCard-cityPage_detail{
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+
+}
 
 
+.bestShop_handCard-cityPage_detail>img{
+    width: 12px;
+    margin-right: 7px;
+}
+
+.bestShop_handCard-cityPage_detail>p{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width:76.25em) {
+    .bestShop_hand-cityPage-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bestShop_handCard-cityPage+.bestShop_handCard-cityPage{
+        margin-top: 0px;
+    }
+
+    .bestShop_hand_hidden-D{
+        display: none;
+    }
+}
+
+/* do you know city Page  */
+
+.extra_my-citypage{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+@media (min-width:76.25em) {
+    .extra_my-citypage{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+
+.design_a_jew-cityPage{
+    height: 447px;
+}
+
+.design_a_jew-cityPage + .design_a_jew-cityPage{
+    margin-top: 40px;
+}
+
+.extra_mt-jewl_city{
+    margin-top: 80px;
+}
+
+.hide_m{
+    display: none;
+}
+
+@media (min-width:76.25em) {
+    .hide_m{
+        display: flex;
+    }
+}
 
 /*-------------  Delhi City Page end here   ----------------*/
+
+
+/*------------ Shop in City start here  ------------*/
+
+.shopCar_shopInCity{
+    width: 343px;
+    height: 329px;
+    margin-inline: auto;
+    background-color: var(--clr-white);
+    border: 1px solid #E0E0E0;
+    border-radius: var(--border-r);
+}
+
+.shopCar_shopInCity+div{
+    position: relative;
+}
+
+
+.shopCar_shopInCity-star{
+    position: absolute;
+    fill: var(--clr-white);
+    top: 0%;
+    left: 0%;
+    fill: var(--clr-white);
+}
+
+@media (min-width:76.25em) {
+    .shopCar_shopInCity{
+        width: 384px;
+        height: 411px;
+        margin-inline:0;
+        border-radius: 15px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+.aboutDelhi_shop{
+    background-color: #FAFAFA;
+    margin-bottom: 50px;
+    padding: 16px;
+    
+}
+
+.aboutDelhi_title{
+    font-size: 24px;
+    color: var(--clr-red);
+    font-weight: var(--font-b);
+}
+
+.aboutDelhi_section{
+    margin-top: 24px;
+}
+
+.aboutDelhi_section-title{
+    font-size: 22px;
+    font-weight: var(--font-sb);
+    color: #000;
+}
+
+.aboutDelhi_section-detail{
+    font-size: 16px;
+    color: #5E5E5E;
+    letter-spacing: 3%;
+    line-height: 176%;
+    margin-top: 16px;
+}
+
+.aboutDelhi_section-detail>a{
+    text-decoration: underline;
+    color: #5E5E5E;
+}
+
+@media (min-width:76.25em) {
+    .w_limit_shopDelhi{
+        max-width: 616px;
+    }
+
+    .hide_D-shopsDlehi{
+        display: none;
+    }
+
+    .aboutDelhi_shop{
+        border-radius: 15px;
+        max-width: 1216px;
+        margin-inline: auto;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        padding: 80px 50px;
+    }
+
+    .aboutDelhi_title{
+        font-size: 32px;
+        font-weight: var(--font-sb);
+    }
+
+    .aboutDelhi_section{
+        margin-top: 40px;
+    }
+
+    .aboutDelhi_section-title{
+        font-size: 28px;
+    }
+}
