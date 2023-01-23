@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/sheri0441/shopKhoj/issues"
   },
-  "homepage": "https://github.com/sheri0441/shopKhoj#readme",
-  "dependencies": {
-    "ol": "^7.2.2"
-  }
+  "homepage": "https://github.com/sheri0441/shopKhoj#readme"
 }

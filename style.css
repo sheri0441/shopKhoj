@@ -3551,48 +3551,271 @@ footer{
 
 
 /*------------ Shop in City start here  ------------*/
+.pagination{
+    margin-top: 32px;
+    margin-bottom: 108px;
+}
 
-.shopCar_shopInCity{
+
+.shopCard_wrapper-shopInCity{
+    display: grid;
+    gap: 16px;
+}
+
+@media (min-width:76.25em) {
+    .pagination{
+        margin-top: 100px;
+    margin-bottom: 150px;
+    }
+
+    .shopCard_wrapper-shopInCity{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+    }
+}
+
+
+
+
+
+
+.shopCard_shopInCity{
     width: 343px;
     height: 329px;
     margin-inline: auto;
     background-color: var(--clr-white);
     border: 1px solid #E0E0E0;
     border-radius: var(--border-r);
+    display: block;
 }
 
-.shopCar_shopInCity+div{
+.shopCard_shopInCity:hover{
+    border: 1px solid var(--clr-red);
+}
+
+
+.shopCard_shopInCity-top{
     position: relative;
+    height: 180px;
 }
 
+.shopCard_shopInCity_image{
+    height: 180px;
+    width: 343px;
+    border-radius: 10px 10px 0 0;
+}
 
-.shopCar_shopInCity-star{
+.shopCard_shopInCity-detail{
+    padding: 16px;
+}
+
+.shopCard_shopInCity-title{
+    font-size: 20px;
+    font-weight: var(--font-sb);
+    color: var(--clr-red);
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.shopCard_shopInCity-star{
     position: absolute;
-    fill: var(--clr-white);
-    top: 0%;
-    left: 0%;
-    fill: var(--clr-white);
+    background-color: #EEEEEE;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
+
+.shopCard_shopInCity-star:hover{
+    background-color: var(--clr-mgray);
+}
+
+.shopCard_shopInCity-about{
+    font-size: 13px;
+    color: #828282;
+    letter-spacing: 2%;
+    line-height: 130%;
+    margin-top: 12px;
+}
+
+.shopCard_shopInCity-contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    height: 14px;
+}
+
+.shopCard_shopInCity-num{
+    display: flex;
+    align-items: center;
+}
+
+.shopCard_shopInCity-num>img{
+    width: 14px;
+    margin-right: 4px;
+}
+
+.shopCard_shopInCity-num>p{
+    font-size: 13px;
+    font-weight: var(--font-m);
+    color: #000;
+}
+
+.shopCard_shopInCity-time{
+    display: flex;
+    align-items: center;
+}
+
+.shopCard_shopInCity-time>img{
+    width: 14px;
+    margin-right: 4px;
+}
+
+.shopCard_shopInCity-time>p{
+    font-size: 12px;
+    color: #0DA537;
+    font-weight: var(--font-m);
+}
+
+
 
 @media (min-width:76.25em) {
-    .shopCar_shopInCity{
+    .shopCard_shopInCity{
         width: 384px;
         height: 411px;
         margin-inline:0;
         border-radius: 15px;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.099);
     }
     
+    .shopCard_shopInCity_image{
+        height: 223px;
+        width: 384px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .shopCard_shopInCity-top{
+        height: 223px;
+    }
+
+    .shopCard_shopInCity-detail{
+        padding: 18px;
+    }
+
+    .shopCard_shopInCity-title{
+        font-size: 24px;
+        line-height: 99.5%;
+    }
+
+    .shopCard_shopInCity-contact{
+        height: 16px;
+        margin-top: 25px;
+    }
+
+    .shopCard_shopInCity-num>p, .shopCard_shopInCity-time>p{
+        font-size: 14px;
+        line-height: 99.5%;
+    }
+
+    .shopCard_shopInCity-time>img{
+        width: 16px;
+        margin-right: 7px;
+    }
+
+    
+    .shopCard_shopInCity-num>img{
+        width: 15px;
+        margin-right: 7px;
+    }
+}
+
+.pageBtnArea{
+    display: flex;
+    margin-top: 24px;
+    justify-content: center;
+}
+
+.numberBtn{
+    display: flex;
+}
+
+.pageBtnArea-next, .pageBtnArea-perv,.numberBtn>div{
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 1px solid #D2D2D2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.numberBtn>div>span{
+    font-weight: var(--font-m);
+    color: #949494;
+}
+
+.numberBtn>div+div{
+    margin-left: 24px;
 }
 
 
 
+.pageBtnArea-perv{
+    margin-right: 68px;
+}
+.pageBtnArea-next{
+    margin-left: 68px;
+}
+
+.pageBtnArea-perv>img, .pageBtnArea-next>img{
+    width: 6px;
+
+}
+
+.pageBtnArea-next:hover, .pageBtnArea-perv:hover,  .numberBtn>div:hover, .currentPage{
+    background-color: #F4F4F4 !important;
+}
 
 
 
+@media (min-width:76.25em) {
+    .pageBtnArea{
+        margin-top: 60px;
+    }
 
+    .pageBtnArea-next, .pageBtnArea-perv,.numberBtn>div{
+        width: 76px;
+        height: 70px;
+    }
 
+    .pageBtnArea-perv>img, .pageBtnArea-next>img{
+        width: 10px;
+        height: 18px;
+    
+    }
 
+    .numberBtn>div>span{
+        font-size: 24px;
+    }
 
+    .numberBtn>div+div{
+        margin-left: 25px;
+    }
+
+    .pageBtnArea-perv{
+        margin-right: 25px;
+    }
+    .pageBtnArea-next{
+        margin-left: 25px;
+    }
+}
 
 .aboutDelhi_shop{
     background-color: #FAFAFA;
@@ -3661,3 +3884,438 @@ footer{
         font-size: 28px;
     }
 }
+
+
+
+
+/*------------ Shop in City end here  ------------*/
+
+/*------------ Shop Page Start Here --------------*/
+.shopDetail_container{
+    background-color: #FAFAFA;
+    /* padding: 30px 16px 38px; */
+    padding-top: 30px;
+    padding-bottom: 38px;
+    width:375px;
+    margin-inline:auto;
+}
+
+@media (min-width:76.25em) {
+    .shopDetail_container{
+        width: 100%;
+        max-width: 1328px;
+        margin-top: 80px;
+        border-radius: 10px 0 0 10px;
+        
+    }
+
+    .shopDetail_container-D{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 33px 45px;
+    }
+}
+
+.shopName_catagory{
+    font-size: 15px;
+    color: #6B6B6B;
+    line-height: 99.5%;
+    text-transform: uppercase;
+}
+
+.shopName_title{
+    text-align: left;
+    font-size: 26px;
+    line-height: 99.5%;
+    color: #000;
+    margin-top: 11px;
+    text-transform: capitalize;
+    font-weight: var(--font-r);
+}
+
+.shopName_speciality{
+    color: var(--clr-red);
+    font-size: 18px;
+    line-height: 99.5%;
+    margin-top: 6px;
+    text-transform: capitalize;
+
+}
+
+
+.shopImage{
+    width: 343px;
+    height: 325px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+@media (min-width:76.25em) {
+    .shopName{
+        grid-column: 2/3;
+    }
+
+    .shopName_catagory{
+        font-size: 20px;
+    }
+
+    .shopName_title{
+        font-size: 34px;
+        margin-top: 12px;
+    }
+
+    .shopName_speciality{
+        font-size: 24px;
+        margin-top: 25px;
+    }
+
+    .shopImage{
+        width: 600px;
+        height: 515px;
+        margin-top: 0;
+        grid-row: 1/3;
+    }
+}
+
+.shopContactInfo{
+    background-color: var(--clr-white);
+    border-radius: 5px;
+    padding: 24px 15px 30px;
+    margin-top: 20px;
+}
+
+
+
+.shopContactInfo_link{
+    display: flex;
+    align-items: center;
+
+}
+
+.shopContactInfo_link>img{
+    width: 16px;
+    margin-right: 7px;
+}
+
+.shopContactInfo_link>a{
+    color: #3044F4;
+}
+
+.shopContactInfo_interset{
+    font-weight: var(--font-l);
+    color: #6B6B6B;
+    margin-top: 21px;
+    font-size: 14px;
+    line-height: 99.5%;
+
+}
+
+.shopContactInfo_interset>span{
+    font-size: 15px;
+    font-weight: var(--font-m);
+    margin-left: 7px;
+}
+
+.shopContactInfo_products{
+    font-weight: var(--font-l);
+    color: #6B6B6B;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 99.5%;
+}
+
+.shopContactInfo_products>span{
+    font-size: 15px;
+    font-weight: var(--font-m);
+    margin-left: 7px;
+}
+
+.shopContactInfo_location{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+
+.shopContactInfo_location>img{
+    width: 12px;
+    margin-right: 10px;
+}
+
+.shopContactInfo_location>p,
+.shopContactInfo_phone>p, 
+.shopContactInfo_time>p,
+.shopContactInfo_range>p{
+    font-weight: var(--font-m);
+    font-size: 15px;
+    line-height: 99.5%;
+    color: #6B6B6B;
+    
+}
+
+.shopContactInfo_phone,
+.shopContactInfo_time,
+ .shopContactInfo_range{
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.shopContactInfo_phone>img{
+    width: 15px;
+    margin-right: 9px;
+}
+
+.shopContactInfo_time>img{
+    width: 16px;
+    margin-right: 9px;
+}
+
+.shopContactInfo_range>img{
+    width: 10px;
+    margin-right: 11px;
+}
+
+@media (min-width:76.25em) {
+    .shopContactInfo{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-top:0 ;
+        padding: 24px;
+    }
+
+    .shopContactInfo_link>img{
+        width: 20px;
+        margin-right: 15px;
+    }
+    
+    .shopContactInfo_link>a{
+        font-size: 20px;
+    }
+
+    .shopContactInfo_interset, .shopContactInfo_products{
+        margin-top: 24px;
+        font-size: 20px;
+    
+    }
+    
+    .shopContactInfo_interset>span,
+    .shopContactInfo_products>span{
+        font-size: 20px;
+        margin-left: 11px;
+    }
+    
+    .shopContactInfo_location>img{
+        width: 18px;
+        margin-right: 16px;
+    }
+
+    .shopContactInfo_location>p,
+    .shopContactInfo_phone>p, 
+    .shopContactInfo_time>p,
+    .shopContactInfo_range>p{
+        font-size: 20px;
+    }
+    .shopContactInfo_phone,
+    .shopContactInfo_time,
+    .shopContactInfo_range{
+        margin-top: 25px;
+    }
+
+
+    .shopContactInfo_phone>img{
+        width: 21px;
+        margin-right: 14px;
+    }
+    
+    .shopContactInfo_time>img{
+        width: 22px;
+        margin-right: 14px;
+    }
+    
+    .shopContactInfo_range>img{
+        width: 13px;
+        margin-right: 19px;
+    }
+}
+
+.shopDetail{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+
+
+.shopDetail_heading{
+    font-size: 16px;
+    color: #000;
+    line-height: 99.5%;
+    font-weight: var(--font-m);
+}
+
+.shopDetail_info{
+    font-size: 15px;
+    color: #6B6B6B;
+    line-height: 99.5%;
+}
+
+
+
+.days, .market{
+    grid-column: 1/3;
+}
+
+.bus{
+    grid-column: 1/4;
+}
+
+@media (min-width:76.25em) {
+    .shopDetail{
+        grid-column: 1/3;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .shopDetail_heading{
+        font-size: 20px;
+    }
+
+    .shopDetail_info{
+        font-size: 20px;
+    }
+
+    .days{
+        width: 138px;
+    }
+
+    .landmark{
+        width: 103px;
+    }
+
+    .market{
+       width:  230px;
+    }
+
+    .parking{
+        width: 141px;
+    }
+
+    .bus{
+        width: 353px;
+    }
+}
+
+.shopMap{
+    background-color: var(--clr-white);
+    width: 343px;
+    height: 414px;
+    border-radius: 10px;
+    margin-top: 25px;
+    border: 1px solid blue;
+}
+
+@media (min-width:76.25em) {
+    .shopMap{
+        grid-column: 1/3;
+        width: 100%;
+        height: 418px;
+        margin-top: 35px;
+    }
+}
+
+.shopPlusPoint{
+    margin-inline: auto;
+    margin-top: 50px;
+}
+
+.shopPlusPoint_title{
+    font-size: 24px;
+    font-weight: var(--font-b);
+    letter-spacing: 3%;color: var(--clr-red);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.shopPlusPoint>p{
+    color: #5E5E5E;
+    line-height: 174%;
+    letter-spacing: 3%;
+
+}
+
+.shopPlusPoint>p+p{
+    margin-top: 19px;
+}
+
+.shopPageDivder{
+    margin-top: 50px;
+    border: 1px solid #EBEBEB;
+}
+
+
+@media (min-width:76.25em) {
+    .shopPlusPoint{
+        margin-top: 100px;
+    }
+
+    .shopPlusPoint_title{
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .shopPlusPoint>p{
+        font-size: 20px;
+    }
+
+    .shopPlusPoint>p+p{
+        margin-top: 20px;
+    }
+
+    .shopPageDivder{
+        margin-top: 80px;
+    }
+}
+
+.shopTags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.shopTags>a{
+    padding: 14px 11px;
+    font-size: 12px;
+    color: var(--clr-red);
+    background-color: var(--clr-white);
+    border: 1px solid var(--clr-red);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+.shopTags>a:hover{
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+}
+
+@media (min-width:76.25em) {
+    .shopTags{
+        gap: 20px 26px;
+    }
+
+    .shopTags>a{
+        font-size: 15px;
+        padding: 17px 21px;
+    }
+}
+
+
+.cardHorizontal_container>.shopCard_shopInCity+.shopCard_shopInCity{
+    margin-left: 30px;
+}
+
+
+/*------------ Shop Page End Here --------------*/
