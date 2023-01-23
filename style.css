@@ -1942,7 +1942,7 @@ h1>span{
     }
 
     .bg-container{
-        padding-top: 67px;
+        padding-top: 76px;
         padding-bottom: 76px;
         display: flex;
         justify-content: space-between;
@@ -3744,7 +3744,8 @@ footer{
     display: flex;
 }
 
-.pageBtnArea-next, .pageBtnArea-perv,.numberBtn>div{
+
+.pageBtnArea-next, .pageBtnArea-perv,.numberBtn>a{
     width: 32px;
     height: 32px;
     background-color: transparent;
@@ -3756,12 +3757,12 @@ footer{
     cursor: pointer;
 }
 
-.numberBtn>div>span{
+.numberBtn>a>span{
     font-weight: var(--font-m);
     color: #949494;
 }
 
-.numberBtn>div+div{
+.numberBtn>a+a{
     margin-left: 24px;
 }
 
@@ -3779,7 +3780,7 @@ footer{
 
 }
 
-.pageBtnArea-next:hover, .pageBtnArea-perv:hover,  .numberBtn>div:hover, .currentPage{
+.pageBtnArea-next:hover, .pageBtnArea-perv:hover,  .numberBtn>a:hover, .currentPage{
     background-color: #F4F4F4 !important;
 }
 
@@ -3790,7 +3791,7 @@ footer{
         margin-top: 60px;
     }
 
-    .pageBtnArea-next, .pageBtnArea-perv,.numberBtn>div{
+    .pageBtnArea-next, .pageBtnArea-perv,.numberBtn>a{
         width: 76px;
         height: 70px;
     }
@@ -3801,11 +3802,11 @@ footer{
     
     }
 
-    .numberBtn>div>span{
+    .numberBtn>a>span{
         font-size: 24px;
     }
 
-    .numberBtn>div+div{
+    .numberBtn>a+a{
         margin-left: 25px;
     }
 
@@ -4319,3 +4320,207 @@ footer{
 
 
 /*------------ Shop Page End Here --------------*/
+
+
+
+/*----------- Markets in Delhi start here  -----------*/
+.marketCard_marketInCity{
+    width: 343px;
+    height: 358px;
+    border-radius: 15px;
+    margin-inline: auto;
+    box-shadow: 4px 0px 30px rgba(0, 0, 0, 0.105);
+}
+
+.marketCard_marketInCity:hover{
+    box-shadow: 4px 0px 30px rgba(0, 0, 0, 0.31);
+}
+
+.marketCard_marketInCity-location{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 18px;
+}
+
+.marketCard_marketInCity-location>img{
+    width: 12px;
+    margin-right: 7px;
+}
+
+.marketCard_marketInCity-location>p{
+    line-height: 99.5%;
+    font-size: 12px;
+    color: #6B6B6B;
+    text-transform: capitalize;
+    
+}
+
+@media (min-width:76.25em) {
+    .marketCard_marketInCity{
+        width: 384px;
+        height: 411px;
+        background-color: var(--clr-white);
+    }
+
+    .marketCard_marketInCity-location{
+        margin-top: 16px;
+    }
+
+
+    .marketCard_marketInCity-location>p{
+        font-size: 14px;
+
+    }
+}
+
+.currentPage_section{
+    color: var(--clr-red) !important;
+}
+
+.mapMargin_market{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.mapHeadin_marketPage{
+    font-size: 16px !important;
+
+}
+
+.mapForDesktop_marketPage{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 70px;
+}
+
+@media (min-width:76.25em) {
+    .mapForDesktop_marketPage{
+        display: flex;
+    }
+}
+
+.mapForDesktop_marketPage>h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: var(--font-sb);
+    text-transform: uppercase;
+}
+
+.mapForDesktop-img{
+    width: 700px;
+    height: 700px;
+    margin-inline: auto;
+}
+/*----------- Markets in Delhi end here  -----------*/
+
+
+/*------------ Market Detail Page start here-------------  */
+
+.shopKhoj_marketDetailPage{
+    margin-top: 50px;
+}
+
+
+.shopKhoj_marketDetailPage>h2{
+    font-size: 25px;
+    font-weight: var(--font-b);
+    line-height: 99.5%;
+    margin-bottom: 20px;
+}
+
+
+
+
+.shopPlusPoint_title-marketDetailPage{
+    font-size: 24px;
+    color: #000;
+    font-weight: var(--font-b);
+    margin-bottom: 6px;
+}
+
+.marketDetailInfo>p{
+    font-size: 14px;
+    line-height: 168.5%;
+    color: #5E5E5E;
+}
+
+#extraText_marketDetailPage, #lessBtn_marketDetailPage{
+    display: none;
+}
+
+#moreBtn_marketDetailPage, #lessBtn_marketDetailPage{
+    color: var(--clr-red);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.mt_marketDetailPage{
+    margin-top: 40px;
+}
+
+.marketDetailPage_video{
+    width: 100%;
+    max-width: 716px;
+    max-height: 386px;
+    margin-inline: auto;
+    display: block;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+@media (min-width:76.25em) {
+    .shopPlusPoint_title-marketDetailPage{
+        font-size: 28px;
+        font-weight: var(--font-sb);
+        margin-bottom: 27px;
+    }
+
+    .shopKhoj_marketDetailPage{
+        margin-top: 100px;
+    }
+
+    .shopKhoj_marketDetailPage>h2{
+        margin-bottom: 60px;
+        font-size: 32px;
+    }
+
+    .mt_marketDetailPage{
+        margin-top: 125px;
+    }
+
+    .marketDetailInfo>p{
+        font-size: 16px;
+    }
+
+    .marketDetailPage_video{
+        margin-top: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.padding_marketDetailPage{
+    padding-top: 1rem;
+    padding-bottom:1rem ;
+}
+
+.cardHorizontal_container>.marketCard_marketInCity+.marketCard_marketInCity{
+    margin-left: 30px;
+}
+
+/*------------ Market Detail Page end here-------------  */
