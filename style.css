@@ -1562,6 +1562,12 @@ h1>span{
     margin-inline: auto;
 }
 
+.blogPostCard>img{
+    width: 321px;
+    height: 319px;
+    border-radius: 10px;
+}
+
 .blogPostCard:hover{
     border: 1px solid var(--clr-red);
 }
@@ -1576,6 +1582,10 @@ h1>span{
         width: 384px;
         height: 549px;
         padding: 15px;
+    }
+
+    .blogPostCard>img{
+        width: 354px;
     }
 
     .blogPostCard +.blogPostCard{
@@ -2594,6 +2604,7 @@ footer{
 
   .form-radio_group{
     display: flex;
+    align-items: center;
   }
 
   .form-radio_group> div+div{
@@ -2620,9 +2631,10 @@ footer{
     left: 0%;
     width: 23px;
     height: 23px;
-    border: 1px solid #CBCBCB;
+    border: 1px solid #000;
     border-radius: 50%;
     background: #FCFCFC;
+    cursor: pointer;
 
   }
 
@@ -2631,6 +2643,7 @@ footer{
     font-size: 14px;
     margin-left: 10px;
     text-transform: capitalize;
+    cursor: pointer;
   }
 
 
@@ -2663,6 +2676,7 @@ footer{
   .form_file::-webkit-file-upload-button{
     visibility: hidden;
   }
+
 
   .form_file{
     width: 100%;
@@ -2732,24 +2746,6 @@ footer{
     margin-top: 25px;
   }
 
-  @media (min-width:76.25em) {
-    .form_btns{
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .form_btns>button{
-        font-size: 16px;
-    }
-
-    .form_btns>button+button{
-        margin-top: 0;
-    }
-  }
-
-  
-
   .form-submitBtn{
     padding: 24px 75px;
     background-color: var(--clr-red);
@@ -2772,6 +2768,27 @@ footer{
     background-color: #000;
     color: var(--clr-white);
   }
+
+  @media (min-width:76.25em) {
+    .form_btns{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .form_btns>button{
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .form_btns>button+button{
+        margin-top: 0;
+    }
+  }
+
+  
+
+ 
 
   .sectionTitle_25{
     font-weight: var(--font-b);
@@ -4336,6 +4353,10 @@ footer{
     box-shadow: 4px 0px 30px rgba(0, 0, 0, 0.31);
 }
 
+.add_fav-market>svg{
+    fill: var(--clr-red);
+}
+
 .marketCard_marketInCity-location{
     display: flex;
     align-items: flex-start;
@@ -4503,17 +4524,6 @@ footer{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .padding_marketDetailPage{
     padding-top: 1rem;
     padding-bottom:1rem ;
@@ -4524,3 +4534,128 @@ footer{
 }
 
 /*------------ Market Detail Page end here-------------  */
+
+
+/*------------ Blog List Page start here --------------- */
+.trendingBlog-section{
+    margin-top: 50px;
+}
+
+.trendingBlog-wrapper{
+    display: flex;
+    overflow-x: scroll;
+    gap: 16px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+}
+
+.trendingBlog-wrapper::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
+
+.trendingBlogCard{
+    display: block;
+    width: 343px;
+    height: 285px;
+    overflow: hidden;
+    position: relative;
+    color: var(--clr-white);
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+}
+
+.trendingBlogCard-img{
+    width: 343px;
+    height: 285px;
+    object-fit: cover;
+}
+
+.trendingBlogCard-textArea{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgb(0, 0, 0),rgba(0, 0, 0, 0.424), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+.trendingBlogCard-top{
+    display: flex;
+}
+
+.trendingBlogCard-trending{
+    background-color: var(--clr-red);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: var(--font-b);
+    padding: 8px;
+    margin-right: 16px;
+    text-transform: uppercase;
+}
+
+.trendingBlogCard-title{
+    font-size: 20px;
+    font-weight: var(--font-sb);
+    margin-top: 12px;
+}
+
+.trendingBlogCard-view{
+    display: flex;
+    align-items: center;
+}
+
+.trendingBlogCard-view>img{
+    width: 25px;
+    height: 13px;
+    margin-right: 6px;
+}
+
+.trendingBlogCard-view>p{
+    font-size: 18px;
+}
+
+@media (min-width:76.25em) {
+    .trendingBlog-section{
+        margin-top: 100px;
+    }
+
+
+    .trendingBlogCard{
+        width: 800px;
+        height: 285px;
+
+    }
+
+    .trendingBlogCard-img{
+        width: 800px;
+        height: 285px;
+    }
+
+    .trendingBlogCard-textArea{
+        padding: 40px;
+    }
+
+    .trendingBlogCard-trending{
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: var(--font-r);
+        margin-right: 24px;
+    }
+
+    .trendingBlogCard-title{
+        font-size: 28px;
+    }
+}
+
+
+
+
+
+/* background-image: linear-gradient(to top, rgb(0, 0, 0),rgba(0, 0, 0, 0.424), rgba(0, 0, 0, 0)); */
+
+/*------------ Blog List Page end here --------------- */
