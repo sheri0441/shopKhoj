@@ -1983,6 +1983,7 @@ h1>span{
     font-size: 22px ;
     font-weight: var(--font-sb);
     color: var(--clr-white);
+    text-transform: capitalize;
 }
 
 .doYouKnow-text{
@@ -5349,3 +5350,680 @@ footer{
 
 
 /*------------ Blog Detail Page end here ------------*/
+
+/*------------ Contact Us Page Start Here---------  */
+
+.contactContent{
+    margin-top: 152px;
+}
+
+.contactForm{
+    width: 375px;
+    margin-inline: auto;
+    background-color: #FAFBFB;
+    position: relative;
+
+}
+
+.form_contactUs{
+    padding-top: 125px;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    padding-bottom: 47px;
+
+}
+
+.contactForm-img{
+    width: 343px;
+    height: 207px;
+    margin-inline: auto;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    margin-top: -102px;
+    position: absolute;
+    left: 16px;
+}
+
+.contactForm-heading{
+    font-size: 40px;
+    color: #27252A;
+    text-transform: capitalize;
+    font-weight: var(--font-r);
+    text-align: left;
+    padding-left: 20px;
+}
+
+.contactForm-input{
+    width: 333px;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #A09DA8;
+    margin-top: 25px;
+    background-color: transparent;
+    margin-inline: auto;
+}
+
+.contactForm-input::placeholder{
+    font-size: 14px;
+    color: #A09DA8;
+    text-transform: capitalize;
+
+}
+
+.contactForm-input:focus-visible{
+    outline: none;
+    border-bottom: 1px solid var(--clr-red);
+}
+
+.contactForm-input+ .contactForm-input{
+    margin-top: 30px;
+}
+
+.contactForm-textArea{
+    resize: none;
+}
+
+.form_contactUs-submit{
+    font-size: 15px;
+    font-weight: var(--font-sb);
+    letter-spacing: 2%;
+    line-height: 99.5%;
+    color: var(--clr-red);
+    border: 1px solid var(--clr-red);
+    width: fit-content;
+    margin-inline: auto;
+    padding: 24px 85px;
+    background-color: transparent;
+    border-radius: 15px;
+    margin-top: 40px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.form_contactUs-submit:hover{
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+}
+
+@media (min-width:76.25em) {
+    .contactContent{
+        margin-top: 100px;
+    }
+
+    .contactForm{
+        width: 1181px;
+        margin-right: 0;
+        background-color: #FAFBFB;
+        display: flex;
+    }
+
+    .form_contactUs{
+        padding-top: 100px;
+        padding-bottom: 131px;
+        padding-left: 118px;
+    }
+
+    .contactForm-img{
+        width: 556px;
+        height: 633px;
+        margin-inline: 0;
+        margin-top: 0px;
+        left: -256px;
+        top: 91px;
+    }
+
+    .contactForm-heading{
+        font-size: 60px;
+        padding-left: 00px;
+    }
+
+    .contactForm-input{
+        width: 548px;
+        font-size: 16px;
+        padding-bottom: 20px;
+        margin-top: 42px;
+        margin-inline: 0;
+    }
+
+    .contactForm-input::placeholder{
+        font-size: 16px;
+    }
+
+    .contactForm-input+ .contactForm-input{
+        margin-top: 53px;
+    }
+
+    .form_contactUs-submit{
+        font-size: 16px;
+        margin-left: 0;
+        padding: 29px 83px;
+        margin-top: 60px;
+    }
+}
+
+.contactInfo{
+    margin-top: 40px;
+}
+
+.contactInfo-group{
+    display: flex;
+    align-items: flex-start;
+    width: 336px;
+    margin-inline: auto;
+}
+
+.contactInfo-group+.contactInfo-group{
+    margin-top: 33px;
+}
+
+.contactInfo-img{
+    width: 29px;
+    margin-top: 9px;
+    margin-right: 20px;
+}
+
+.contactInfo-title{
+    font-size: 20px;
+    font-weight: var(--font-sb);
+    color: #000;
+    text-transform: capitalize;
+    line-height: 186%;
+}
+
+.contactInfo-des{
+    color: #27252A;
+    line-height: 172.5%;
+}
+
+.contactMap{
+    width: 100%;
+    height: 142px;
+    background-color: #3044F4;
+    margin-top: 50px;
+}
+
+@media (min-width:76.25em) {
+    .contactInfo{
+        margin-top: 80px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 145px;
+    }
+    .contactInfo-group{
+        display: flex;
+        align-items: flex-start;
+        width: fit-content;
+        margin-inline: auto;
+
+    }
+
+    .contactInfo-group{
+        width: 336px;
+        margin: 0;
+    }
+
+    .contactInfo-group+.contactInfo-group{
+        margin: 0;
+        width: fit-content;
+    }
+
+    .contactMap{
+        margin-top: 80px;
+        height: 396px;
+    }
+}
+
+/*------------ Contact Us Page End Here---------  */
+
+
+/*------------ FAQ section and page start here---------  */
+.FAQ_section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.faq{
+    background-color: #FCFCFC;
+    padding: 20px 16px;
+    border-radius: 5px;
+}
+
+.faq+.faq{
+    margin-top: 20px;
+}
+
+.faq>summary{
+    font-size: 14px;
+    font-weight: var(--font-sb);
+    line-height: 150%;
+    color: #27252A;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    list-style: none;
+    position: relative;
+    padding-right: 110px;
+}
+
+.faq>summary::before{
+    content: '';
+    position: absolute;
+    background-image: url('./asset/icon/redPlus.svg');
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.faq[open]>summary::before{
+    display: none;
+}
+
+.faq>summary::after{
+    content: '';
+    position: absolute;
+    background-image: url('./asset/icon/redMinus.svg');
+    background-size: contain;
+    width: 12px;
+    height: 1px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.faq[open]>summary::after{
+    display: block;
+}
+
+.faq>p{
+    font-size: 13px;
+    line-height: 166.5%;
+    letter-spacing: 2%;
+    color: #A09DA8;
+    margin-top: 8px;
+}
+
+@media (min-width:76.25em) {
+    .FAQ_section{
+        margin-top: 100px;
+        margin-bottom: 150px;
+    } 
+
+    .faq{
+        padding: 50px 30px;
+    }
+
+    .faq+.faq{
+        margin-top: 26px;
+    }
+
+    .faq>summary{
+        font-size: 20px;
+        padding-right: 254px;
+    }
+
+    .faq>summary::before{
+        width: 17px;
+        height: 17px;
+    }
+
+    .faq>summary::after{
+        width: 21px;
+        height: 3px;
+    }
+
+    .faq>p{
+        font-size: 18px;
+        line-height: 186.5%;
+        letter-spacing: 5%;
+        margin-top: 26px;
+    }
+}
+
+
+/*------------ FAQ section and page end here---------  */
+
+/* ---------------About start here----------- */
+.about_first{
+    margin-top: 50px;
+    display: grid;
+    gap: 30px;
+}
+
+.aboutPage-heading_two{
+    font-weight: var(--font-m);
+    font-size: 18px;
+    color: #000;
+}
+
+.aboutPage-img_one{
+    width: 343px;
+    height: 246px;
+    display: block;
+    margin-inline: auto;
+    border-radius: var(--border-r);
+}
+
+.about_first-p{
+    color: #696969;
+}
+
+.about_first-p>a{
+    color: var(--clr-red);
+}
+
+@media (min-width:76.25em) {
+    .about_first{
+        margin-top: 100px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 50px 58px;
+    }
+
+    .aboutPage-img_one{
+        width: 488px;
+        height: 482px;
+        display: block;
+        margin-inline: auto;
+        border-radius: var(--border-r);
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    .aboutPage-heading_two{
+        font-size: 36px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding-top: 40px;
+        line-height: 125%;
+    }
+
+    .about_first-p{
+        font-size: 24px;
+        /* padding-bottom: 48px; */
+    }
+}
+
+
+.about_sec{
+    margin-top: 20px;
+}
+
+.about_sec-heading{
+    font-size: 22px;
+    font-weight: var(--font-sb);
+    font-style: italic;
+    line-height: 150%;
+    color: #000;
+}
+
+.about_sec-img{
+    width: 343px;
+    height: 246px;
+    margin-inline: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+.about_sec-p{
+    font-size: 13px;
+    line-height: 156%;
+    letter-spacing: 3%;
+    color: #454545;
+    margin-top: 20px;
+}
+
+@media (min-width:76.25em) {
+    .about_sec{
+        margin-top: 150px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 32px;
+    }
+
+    .about_sec-heading{
+        font-size: 40px;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .about_sec-img{
+        width: 591px;
+        height: 641px;
+        margin: 0;
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+    .about_sec-p{
+        font-size: 18px;
+    }
+}
+
+.about_third{
+    margin-top: 50px;
+    background-color: #FFF3F3;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.about_third-heading{
+    font-size: 30px;
+    color: #000;
+    font-weight: var(--font-sb);
+    font-style: italic;
+    text-align: left;
+    line-height: 99.5%;
+}
+
+.about_third-p{
+    font-size: 13px;
+    color: #454545;
+    line-height: 156%;
+    letter-spacing: 3%;
+    margin-top: 14px;
+}
+
+.about_card-wrapper{
+    margin-top: 30px;
+}
+
+.about_third-p>span{
+    color: var(--clr-red);
+    font-weight: var(--font-sb);
+}
+
+.about_third-p>span>a{
+    color: var(--clr-red);
+    text-decoration: underline;
+}
+
+.about_card{
+    display: block;
+}
+
+.about_card:hover{
+    outline: 1px solid var(--clr-red);
+}
+
+.about_card+.about_card{
+    margin-top: 15px;
+}
+
+.about_card-img{
+    width: 343px;
+    height: 223px;
+    object-fit: cover;
+    border-radius: var(--border-r);
+    display: block;
+    margin-inline: auto;
+}
+
+.about_card-h{
+    font-size: 20px;
+    font-weight: var(--font-sb);
+    line-height: 99.5%;
+    color: var(--clr-red);
+    text-align: center;
+    margin-top: 23px;
+}
+
+.about_card-p{
+    font-size: 13px;
+    line-height: 120%;
+    letter-spacing: 3%;
+    color: #717171;
+    margin-top: 9px;
+    text-align: center;
+}
+
+@media (min-width:76.25em) {
+    .about_third{
+        margin-top: 150px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .about_third-heading{
+        font-size: 56px;
+    }
+
+    .about_third-p{
+        font-size: 18px;
+        margin-top: 50px;
+    }
+
+    .about_third-p+.about_third-p{
+        margin-top: 40px;
+    }
+
+    .about_card-wrapper{
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about_card{
+        width: 387px;
+    }
+
+    .about_card+.about_card{
+        margin-top: 0px;
+    }
+
+    .about_card-img{
+        width: 383px;
+        height: 223px;
+    }
+
+    .about_card-h{
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .about_card-p{
+        font-size: 16px;
+        margin-top: 14px;
+    }
+    
+}
+
+.about_founder{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F8F8F8;
+    font-size: 21px;
+    font-weight: var(--font-m);
+    line-height: 99.5%;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    color: #CCCFD7;
+}
+
+.about_founder>.red{
+    color: var(--clr-red);
+}
+
+.about_founder>.black{
+    color: #000;
+}
+
+.founder_card-img{
+    width: 343px;
+    height: 244px;
+    display: block;
+    margin-inline: auto;
+    border-radius: var(--border-r);
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+.founder_card-text{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.founder_card-text_name{
+    font-size: 22px;
+    font-weight: var(--font-sb);
+    font-style: italic;
+    line-height: 150%;
+    color: #000;
+}
+
+.founder_card-text_about{
+    font-size: 13px;
+    line-height: 156%;
+    letter-spacing: 3%;
+    color: #454545;
+    margin-top: 4px;
+}
+
+@media (min-width:76.25em) {
+    .about_founder{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 34px;
+        margin-top: 150px;
+    }
+
+    .founder_card{
+        margin-top: 40px;
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        margin-bottom: 180px;
+    }
+
+    .founder_card-img{
+        width: 592px;
+        height: 387px;
+        margin-inline: 0;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .founder_card-text{
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .founder_card-text_name{
+        font-size: 40px;
+    }
+
+    .founder_card-text_about{
+        font-size: 18px;
+        margin-top: 24px;
+    }
+}
+/* ---------------About end here----------- */
