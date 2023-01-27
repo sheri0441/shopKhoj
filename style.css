@@ -2866,6 +2866,7 @@ footer{
             font-size: 58px;
             font-weight: var(--font-b);
             line-height: 58px;
+            max-width: 891px;
     
     }
 }
@@ -3483,6 +3484,10 @@ footer{
     margin-inline: auto;
 }
 
+.bestShop_handCard-cityPage:hover{
+    border: 1px solid var(--clr-red);
+}
+
 .bestShop_handCard-cityPage+.bestShop_handCard-cityPage{
     margin-top: 20px;
 }
@@ -3623,7 +3628,7 @@ footer{
 
 .shopCard_shopInCity_image{
     height: 180px;
-    width: 343px;
+    width: 342px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -3717,7 +3722,7 @@ footer{
     
     .shopCard_shopInCity_image{
         height: 223px;
-        width: 384px;
+        width: 382px;
         border-radius: 15px 15px 0 0;
     }
 
@@ -6027,3 +6032,104 @@ footer{
     }
 }
 /* ---------------About end here----------- */
+
+
+
+/*-------- Online Shop Page Start Here -------- */
+.onlineShop_section{
+    margin-top: 50px;
+}
+
+.onlineShop_heading{
+    font-size: 24px;
+    font-weight: var(--font-b);
+    color: #000;
+    line-height: 107%;
+    text-transform: uppercase;
+}
+
+.onlineShop_p{
+    font-size: 15px;
+    line-height: 109%;
+    color: rgba(0, 0, 0, 0.604);
+    letter-spacing: 3%;
+    margin-top: 10px;
+}
+
+@media (min-width:76.25em) {
+    .onlineShop_section{
+        margin-top: 100px;
+    }
+
+    .onlineShop_heading{
+        font-size: 42px;
+        line-height: 99.5%;
+    }
+
+    .onlineShop_p{
+        font-size: 20px;
+        line-height: 99.5%;
+        margin-top: 30px;
+        max-width: 810px;
+    }
+}
+
+.onlineShop-Card_title{
+    font-size: 24px;
+    font-weight: var(--font-sb);
+    line-height: 99.5%;
+    color: #000;
+    margin-top: 20px;
+}
+
+
+.onlineShop_card-wrapper_one, .onlineShop_card-wrapper{
+    display: grid;
+    margin-top: 30px;
+}
+
+.mb_onlineShop{
+    margin-bottom: 50px;
+}
+
+.onlineShop_cta{
+    font-size: 20px;
+    font-weight: var(--font-m);
+    line-height: 174%;
+    letter-spacing: 3%;
+    color: #000;
+}
+
+
+@media (min-width:76.25em) {
+    .onlineShop_card-wrapper_one{
+        gap: 20px 10px;
+        margin-top: 60px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .onlineShop_card-wrapper{
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .mb_onlineShop{
+        margin-bottom: 150px;
+    }
+
+    
+}
+
+
+
+
+/*-------- Online Shop Page End Here -------- */
+
+
+
+.null_mt{
+    margin-top: 0;
+}
