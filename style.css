@@ -668,6 +668,9 @@ nav>a:hover{
     outline: 2px solid var(--clr-red);
 }
 
+.cityOption>select{
+    cursor: pointer;
+}
 
 .sreachBar::placeholder{
     color: var(--clr-mgray);
