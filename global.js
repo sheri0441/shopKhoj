@@ -1,8 +1,7 @@
-
-// header bg changer 
 const header = document.getElementsByClassName("navBar");
 
 const headerBg = () => {
+    
     if (
         window.scrollY === 0
         ) {
@@ -11,21 +10,8 @@ const headerBg = () => {
             header[0].style.background = "#9597A1" ;
         }
 }
-    
-window.addEventListener('scroll', headerBg)
 
-
-// // Navigation 
-
-// const hamburger = document.getElementById('hamburger')
-// const close = document.getElementById('close')
-
-// const check = () => {
-//     console.log('click');
-// }
-
-
-// hamburger.addEventListener('click', check)
+window.addEventListener('scroll', headerBg);
 
 
 
@@ -53,15 +39,16 @@ const cityNav = document.getElementById('dropDown_city');
 
 
 const showNav =() => {
-    if(cityNav.style.display === "none"){
-        cityNav.style.display = "flex" 
+    console.log("working");
+    if(cityNav.style.display === "flex"){
+        cityNav.style.display = "none" 
     } else {
-        cityNav.style.display = "none"
+        cityNav.style.display = "flex"
     }
 }
 
 
 
-btn.addEventListener('click', showNav)
+btn.addEventListener('click', showNav);
 
 
