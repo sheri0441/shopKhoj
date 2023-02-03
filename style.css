@@ -884,7 +884,16 @@ h1>span{
     display: block;
     flex-shrink: 0;
     margin-inline:auto ;
+    transition: all ease-in-out 0.2s;
+}
 
+.cityCard>img{
+    border-radius: var(--border-r);
+    width: 100%;
+}
+
+.cityCard:hover{
+    box-shadow: 0px 0px 12px grey;
 }
 
 .cityCard-text{
@@ -910,6 +919,11 @@ h1>span{
     font-size: 1.5rem;
     color: var(--clr-white);
     font-weight: var(--font-sb);
+    transition: all ease-in-out 0.2s;
+}
+
+.cityCard:hover>.cityCard-text>h3{
+    color: var(--clr-red);
 }
 
 .cityCard-text>p{
@@ -920,6 +934,7 @@ h1>span{
 
 @media (min-width:76.25em) {
     .cityCard-Wrapper{
+        padding-top: 20px;
         display: flex;
         overflow: scroll;
         padding-bottom: 41px;
@@ -1053,6 +1068,12 @@ h1>span{
     position: relative;
 }
 
+.shopCard>img{
+   width: 343px;
+   height: 351px;
+   border-radius: var(--border-r);
+}
+
 .shopCard+.shopCard{
     margin-top: 20px;
 }
@@ -1062,6 +1083,13 @@ h1>span{
         width: 592px;
         height: 500px;
     }
+
+    .shopCard>img{
+        width: 592px;
+        height: 398px;
+        border-radius: var(--border-r);
+     }
+     
 
     .shopCard+.shopCard{
         margin-top: 0px;
@@ -1304,6 +1332,10 @@ h1>span{
     margin-inline: auto;
 }
 
+.handShopCard:hover{
+    border: 1px solid var(--clr-red);
+}
+
 .handShopCard > h3{
     font-size: 18px;
     color: black;
@@ -1436,6 +1468,12 @@ h1>span{
     cursor: pointer;
 }
 
+.submitBtn:hover{
+    color: #000;
+    background-color: var(--clr-white);
+
+}
+
 
 @media (min-width:76.25em) {
     
@@ -1464,6 +1502,12 @@ h1>span{
     margin-inline: auto;
 }
 
+.jewellaryShopCard>img{
+    width: 343px;
+    height: 380px;
+    border-radius: var(--border-r);
+}
+
 .jewellaryShopCard+.jewellaryShopCard{
     margin-top: 20px;
 }
@@ -1488,6 +1532,12 @@ h1>span{
     .jewellaryShopCard{
         width: 384px;
         height: 472px;
+    }
+
+    .jewellaryShopCard>img{
+        width: 384px;
+        height: 401px;
+        border-radius: var(--border-r);
     }
 
     .jewellaryShopCard+.jewellaryShopCard{
@@ -1724,7 +1774,12 @@ h1>span{
     border-radius: var(--border-r);
     position: relative;
     margin-inline: auto;
+}
 
+.acceShopCard>img{
+    width: 343px;
+    height: 352px;
+    border-radius: var(--border-r);
 }
 
 .acceShopCard + .acceShopCard{
@@ -1732,15 +1787,18 @@ h1>span{
 }
 
 @media (min-width:76.25em) {
-    .acceShopCard + .acceShopCard{
-        margin-top: 0px;
-    }
-}
-
-@media (min-width:76.25em) {   
     .acceShopCard{
         width: 592px;
         height: 398px;
+    }
+
+    .acceShopCard>img{
+        width: 592px;
+        height: 398px;
+    }
+
+    .acceShopCard + .acceShopCard{
+        margin-top: 0px;
     }
 }
 
@@ -2130,6 +2188,10 @@ footer{
     color: #5E5E5E;
 }
 
+.pages>a:hover , .bestLehanga>a:hover, .bestPlaces>a:hover, .artificialJewellery>a:hover{
+    color: var(--clr-red);
+}
+
 .bestLehanga , .artificialJewellery{
     margin-top: 30px;
 }
@@ -2161,6 +2223,10 @@ footer{
 .sitemap, .term, .copyright{
     display: block;
     font-size: 15px;
+}
+
+.sitemap:hover, .term:hover, .copyright:hover{
+    color: var(--clr-red);
 }
 
 .sitemap{
@@ -2323,6 +2389,7 @@ footer{
     font-size: 34px;
     font-weight: var(--font-sb);
     color: var(--clr-white);
+    max-width: 891px;
 }
 
 .pageBanner-links{
@@ -2335,6 +2402,10 @@ footer{
     text-transform: uppercase;
     text-decoration: underline;
     position: relative;
+}
+
+.pageBanner-links>a:hover{
+    color: var(--clr-red);
 }
 
 .pageBanner-links>a+a{
@@ -2422,17 +2493,17 @@ footer{
     }
 }
 
-.watchPara{
+.watchVideo>*>p, .watchVideo>*>*>p{
     line-height: 161%;
     color: #656565;
     margin-top: 15px;
 }
 
-.extraM{
+.shopOwners>p{
     margin-bottom: 50px;
 }
 
-.paraLink{
+.watchVideo>*>*>p>a, .watchVideo>*>p>a{
     color: var(--clr-red);
     font-weight: var(--font-m);
 }
@@ -2462,11 +2533,8 @@ footer{
 
 /* get linked section  */
 
-
-
 .getLinked{
     margin-top: 50px;
-    /* max-width: 343px; */
     margin-inline: auto;
 }
 
@@ -2488,8 +2556,6 @@ footer{
     margin-bottom: 25px;
     text-transform: capitalize;
 }
-
-
 
 .formPart-title{
     margin-top: 20px;
@@ -2890,6 +2956,7 @@ footer{
     padding-bottom: 32px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .cityPage_nav>a{
@@ -2899,6 +2966,7 @@ footer{
     text-transform: uppercase;
     position: relative;
     cursor: pointer;
+    width: fit-content;
 }
 
 .cityPage_nav>a+a{
@@ -3223,7 +3291,9 @@ footer{
 }
 
 .bestMall-card_city>img{
-    object-fit: cover;
+    width: 343px;
+    height: 345px;
+    border-radius: var(--border-r);
 }
 
 .bestMall-card_city--text{
@@ -3267,6 +3337,11 @@ footer{
 
 
 @media (min-width:76.25em) {
+    .bestMall-card_city>img{
+        width: 100%;
+        height: auto;
+    }
+
     .bestMall-card_city--text{
         padding-left:35px;
         padding-right:50px;
@@ -3446,6 +3521,10 @@ footer{
     display: block;
 }
 
+.bestShopCard_clothing-citypage:hover{
+    border: 1px solid var(--clr-red);
+}
+
 .bestShopCard_clothing_cityPage-title{
     font-size: 24px;
     font-weight: var(--font-m);
@@ -3590,7 +3669,7 @@ footer{
 }
 
 .design_a_jew-cityPage + .design_a_jew-cityPage{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .extra_mt-jewl_city{
@@ -4056,6 +4135,10 @@ footer{
 
 .shopContactInfo_link>a{
     color: #3044F4;
+}
+
+.shopContactInfo_link>a:hover{
+    color: var(--clr-red);
 }
 
 .shopContactInfo_interset{
@@ -5879,7 +5962,7 @@ footer{
     line-height: 99.5%;
 }
 
-.about_third-p{
+.about_third>.container>p{
     font-size: 13px;
     color: #454545;
     line-height: 156%;
@@ -5891,12 +5974,12 @@ footer{
     margin-top: 30px;
 }
 
-.about_third-p>span{
+.about_third>.container>p>span{
     color: var(--clr-red);
     font-weight: var(--font-sb);
 }
 
-.about_third-p>span>a{
+.about_third>.container>p>span>a{
     color: var(--clr-red);
     text-decoration: underline;
 }
@@ -5951,12 +6034,12 @@ footer{
         font-size: 56px;
     }
 
-    .about_third-p{
+    .about_third>.container>p{
         font-size: 18px;
         margin-top: 50px;
     }
 
-    .about_third-p+.about_third-p{
+    .about_third>.container>p+.about_third>.container>p{
         margin-top: 40px;
     }
 
@@ -6486,6 +6569,12 @@ footer{
     width: 100%;
     padding: 25px 0 18px 14px;
     text-transform: capitalize;
+}
+
+.clothing_section-card:hover>p{
+    color: var(--clr-red);
+    background-image: none;
+    background: #ffffffa8;
 }
 
 @media (min-width:76.25em) {

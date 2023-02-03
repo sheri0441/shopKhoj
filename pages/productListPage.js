@@ -1,43 +1,3 @@
-let slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-let i;
-const x = document.getElementsByClassName("slide");
-const dots = document.getElementsByClassName("slidePoint");
-if (n > x.length) {slideIndex = 1}
-if (n < 1) {slideIndex = x.length}
-for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-}
-for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace("active", "");
-}
-x[slideIndex-1].style.display = "block";  
-dots[slideIndex-1].className += " active";
-}
-
-
-const sliderChanger = () =>{
-    setInterval(function () {
-        plusDivs(1);
-        sliderChanger;
-    }, 5000)
-
-} 
-
-
-window.addEventListener('load', sliderChanger)
-
-
 const header = document.getElementsByClassName("navBar");
 
 const headerBg = () => {
@@ -54,6 +14,7 @@ const headerBg = () => {
 window.addEventListener('scroll', headerBg);
 
 
+
 // navigation 
 const closeBtn = document.getElementById('menuClose');
 const hamburger = document.getElementById('hamburger');
@@ -67,6 +28,7 @@ const showMenu = () => {
     menu.style.display= 'block'
 }
 
+
 hamburger.addEventListener('click', showMenu)
 closeBtn.addEventListener('click', hideMenu)
 
@@ -74,6 +36,7 @@ closeBtn.addEventListener('click', hideMenu)
 // city nav bar botton 
 const btn = document.getElementById('dropDown');
 const cityNav = document.getElementById('dropDown_city');
+
 
 const showNav =() => {
     if(cityNav.style.display === "flex"){
@@ -83,8 +46,9 @@ const showNav =() => {
     }
 }
 
-btn.addEventListener('click', showNav);
 
+
+btn.addEventListener('click', showNav);
 
 // Read more and Read less Button
 
@@ -103,5 +67,23 @@ const hideText = () => {
     extraText.style.display = "none";
 }
 
+
 moreBtn.addEventListener('click', showText)
 lessBtn.addEventListener('click', hideText)
+
+const left = document.getElementById('cardHorizontal_arrow-left');
+const right = document.getElementById('cardHorizontal_arrow-right');
+const horiContainer = document.getElementById('cardHorizontal_container')
+
+
+const rightMove = () => {
+    horiContainer.scrollLeft += 343;
+}
+const leftMove = () => {
+    horiContainer.scrollLeft -= 343;
+}
+
+
+
+left.addEventListener('click', leftMove)
+right.addEventListener('click', rightMove)
