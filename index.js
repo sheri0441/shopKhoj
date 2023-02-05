@@ -39,6 +39,8 @@ window.addEventListener('load', sliderChanger)
 
 
 const header = document.getElementsByClassName("navBar");
+const header1 = document.getElementsByClassName("header-style");
+
 
 const headerBg = () => {
     
@@ -46,8 +48,10 @@ const headerBg = () => {
         window.scrollY === 0
         ) {
             header[0].style.background = "transparent";
+            header1[0].style.marginTop = "0px";
         } else {
             header[0].style.background = "#9597A1" ;
+            header1[0].style.marginTop = "-30px" ;
         }
 }
 
@@ -58,13 +62,16 @@ window.addEventListener('scroll', headerBg);
 const closeBtn = document.getElementById('menuClose');
 const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
+const body = document.getElementsByTagName('body')[0]
 
 const hideMenu = () => {
     menu.style.display= 'none'
+    body.style.overflow = 'auto'
 }
 
 const showMenu = () => {
     menu.style.display= 'block'
+    body.style.overflow = 'hidden'
 }
 
 hamburger.addEventListener('click', showMenu)

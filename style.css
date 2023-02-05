@@ -50,10 +50,21 @@ a{
     top: 0%;
     left: 0%;
     width: 100%;
-    min-height: 110vh;
+    min-height: 100vh;
+    height: 100%;
     padding-top: 50px;
     display: none;
+    overflow-y: scroll;
 }
+
+.menu::-webkit-scrollbar,
+    .menu::-webkit-scrollbar-thumb,
+    .menu::-webkit-scrollbar-track { 
+        height: 5px;
+        border: none;
+        background: transparent;
+    }
+
 .topBtn{
     display: flex;
     justify-content: space-between;
@@ -118,7 +129,7 @@ a{
     .menu_d{
         display: flex;
         flex-direction: column;
-        height: 430px;
+        height: 100%;
         position: relative;
 
     }
@@ -129,9 +140,8 @@ a{
         grid-template-rows: auto;
         align-items: center;
         margin-top: auto;
-        /* align-self: flex-end; */
         position: absolute;
-        bottom: -150px;
+        bottom: 50px;
     }
 
     .menu_copyright{
@@ -206,6 +216,7 @@ a{
     align-items: center;
     margin-top: 25px;
     cursor: pointer;
+    border: none;
 }
 #dropDown>p{
     font-size: 24px;
@@ -348,9 +359,8 @@ a{
 
 
 .navBar{
-    position: sticky;
-    margin-bottom: -121px;
-    top: -40px;
+    position: fixed;
+    top: -0px;
     width: 100%;
     z-index: 99;
     max-width: 1440px;
@@ -359,8 +369,7 @@ a{
 
 @media (min-width:76.25em) {
     .navBar{
-        margin-bottom: -132px;
-        top: -30px;
+        top: 0px;
     }
     
 }
