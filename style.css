@@ -2986,9 +2986,6 @@ footer{
     color: var(--clr-red);
 }
 
-/* .cityPage_nav>a:first-child{
-    color: var(--clr-red);
-} */
 
 .cityPage_nav>a:not(:first-child){
     margin-left: 16px;
@@ -3022,9 +3019,6 @@ footer{
         right: -12px;
     }
 }
-
-
-
 
 
 
@@ -3206,13 +3200,34 @@ footer{
     transform: scale(1.5);
 }
 
+.desktopMap{
+    margin-top: 150px;
+    display: none;
+}
 
+.desktopMap>iframe{
+    width: 100%;
+    height: 704px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.desktopMap>h2{
+    font-size: 32px;
+    font-weight: var(--font-sb);
+    line-height: 99.5%;
+    text-align: center;
+}
 
 @media (min-width:76.25em) {
     .bestMarket-card_city--first{
 
         grid-column: 1/4;
     }  
+    .desktopMap{
+        margin-top: 150px;
+        display: block;
+    }
 
     .bestMarket-card_city-text--first{
         padding-bottom: 40px;
@@ -4361,7 +4376,11 @@ footer{
     height: 414px;
     border-radius: 10px;
     margin-top: 25px;
-    border: 1px solid blue;
+    padding: 10px 8px;
+}
+
+.shopMap>iframe{
+    border-radius: var(--border-r);
 }
 
 @media (min-width:76.25em) {
@@ -4370,6 +4389,7 @@ footer{
         width: 100%;
         height: 418px;
         margin-top: 35px;
+        padding: 12px 15px;
     }
 }
 
@@ -5688,7 +5708,6 @@ footer{
 .contactMap{
     width: 100%;
     height: 142px;
-    background-color: #3044F4;
     margin-top: 50px;
 }
 
@@ -6115,6 +6134,10 @@ footer{
 #ceo:checked+label, #advisor:checked+label{
     color: var(--clr-red);
 
+}
+
+#advisorContainer{
+    display: none;
 }
 
 .staffDiveder{
