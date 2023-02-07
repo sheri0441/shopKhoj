@@ -55,3 +55,45 @@ const showNav =() => {
 
 btn.addEventListener('click', showNav);
 
+// nav srach bar interaction 
+
+const sb_icon_search = document.getElementById('sb-icon-search') ;
+const navSerachBar = document.getElementById('navSerachBar');
+
+const toggleTheNavSraechBar = () => {
+    if (navSerachBar.style.display === 'flex') {
+        navSerachBar.style.display = 'none'
+    }  else {
+        navSerachBar.style.display = 'flex'
+    }
+}
+
+sb_icon_search.addEventListener('click', toggleTheNavSraechBar)
+
+
+const checkTheSreachNav = () => {
+    
+    if (window.innerWidth >= 1220 ){
+        if(navSerachBar.style.display === 'none'){
+            navSerachBar.style.display = 'flex';
+        }
+    }
+}
+
+window.addEventListener('resize', checkTheSreachNav);
+
+// back to top botton 
+
+const back_to_top = document.getElementsByClassName('back-to-top')[0];
+
+const checkBackToTop = () => {
+    if( window.scrollY >= 875){
+        back_to_top.style.display = "flex"
+    } else {
+        back_to_top.style.display = "none"
+
+    }
+}
+
+window.addEventListener('scroll', checkBackToTop)
+

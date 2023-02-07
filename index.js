@@ -112,3 +112,20 @@ const hideText = () => {
 
 moreBtn.addEventListener('click', showText)
 lessBtn.addEventListener('click', hideText)
+
+
+
+// back to top botton 
+
+const back_to_top = document.getElementsByClassName('back-to-top')[0];
+
+const checkBackToTop = () => {
+    if( window.scrollY >= 875){
+        back_to_top.style.display = "flex"
+    } else {
+        back_to_top.style.display = "none"
+
+    }
+}
+
+window.addEventListener('scroll', checkBackToTop)

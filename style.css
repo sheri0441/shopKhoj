@@ -53,6 +53,7 @@ a{
     min-height: 100vh;
     height: 100%;
     padding-top: 50px;
+    padding-bottom: 50px;
     display: none;
     overflow-y: scroll;
 }
@@ -103,21 +104,33 @@ a{
     grid-row: 3/4;
 }
 
+
 .menu_term{
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.601);
     text-align: center;
     margin-top: 30px;
     grid-row: 2/3;
+    display: flex;
 }
 
-.menu_term:hover{
+.menu_term > p{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.601);
+    margin-inline: 14px;
+}
+
+.menu_term > a{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.601);
+}
+
+.menu_term>a:hover{
     color: var(--clr-white);
 }
 
 @media (min-width:76.25em) {
     .menu{
         padding-top: 40px;
+        padding-bottom: 0px;
     }
 
     .menuClose{
@@ -158,6 +171,11 @@ a{
         margin-left: auto;
 
     }
+
+    .menu_term > a{
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.601);
+    }
 }
 
 .menuSocialLink{
@@ -173,6 +191,14 @@ a{
 .menu_socialLinks{
     margin-inline: auto;
     margin-top: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu_socialLinks>a{
+    display: block;
+    width: 28px;
 }
 
 .menuSocialLink:hover{
@@ -353,6 +379,37 @@ a{
 
 
 /* utility classes end */
+
+a.back-to-top {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+    right: 30px;
+    bottom: 30px;
+    background: var(--clr-white);
+    border-radius: 50%;
+    text-align: center;
+    height: 45px;
+    width: 45px;
+    box-shadow: 0 5px 33px rgb(0 0 0 / 20%);
+    transition: .3s ease;
+}
+
+a.back-to-top:hover{
+    background-color: var(--clr-red);
+}
+
+.back-to-top:hover >svg{
+    fill: var(--clr-white);
+}
+
+.back-to-top>svg{
+    display: block;
+    margin-inline: auto;
+    fill: var(--clr-red);
+}
 
 
 /* header styler  */
@@ -2224,8 +2281,9 @@ footer{
     }
 
     .four-flex{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        /* justify-content: space-between; */
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -2233,6 +2291,7 @@ footer{
     display: block;
     font-size: 15px;
 }
+
 
 .sitemap:hover, .term:hover, .copyright:hover{
     color: var(--clr-red);
@@ -2246,7 +2305,18 @@ footer{
 
 .term{
     color: rgba(0, 0, 0, 0.603);
+}
+
+.four-flex>div{
+    display: flex;
+    align-items: center;
     margin-top: 20px;
+    justify-content: center;
+}
+
+.four-flex>div>p{
+    color: rgba(0, 0, 0, 0.603);
+    margin-inline: 15px;
 }
 
 .copyright{
@@ -2255,8 +2325,22 @@ footer{
 }
 
 @media (min-width:76.25em) {
-    .term ,.copyright{
+    .four-flex>div ,.copyright{
         margin-top: 17px;
+    }
+    .four-flex>div{
+        order: 3;
+        margin-left: auto;
+    }
+
+    
+    .sitemap{
+        order: 1;
+        margin-right: auto;
+    }
+
+    .copyright{
+        order: 2;
     }
 }
 
@@ -2286,15 +2370,14 @@ footer{
 }
 
 .navSerachBar{
-    display: none;
-    position: relative;
-
-    margin-left: -300px;
+    position: absolute;
     background-color: var(--clr-white);
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    width: 283px;
+    right: 0;
+    top: 50px;
     border-radius: 15px;
     height: 54px;
     display: none;
@@ -2314,6 +2397,7 @@ footer{
 
 .sb-icon-search> svg{
     width: 20px;
+    cursor: pointer;
 }
 
 .sb-search-input{
@@ -2347,6 +2431,8 @@ footer{
         align-items: center;
         justify-content: space-between;
         border-radius: 15px;
+        right: 0;
+        top: 0px;
         height: 66px;
         width: 283px;
         margin-right: 40px;
@@ -6444,9 +6530,36 @@ footer{
     margin-top: 20px;
 }
 
-.latest_video{
+.latest_video-container>img{
     width: 100%;
     height: 100%;
+}
+
+.videoPlayContainer{
+    position: fixed;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    top: 0%;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.755);
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: none;
+}
+
+.videoPlayContainer>.menuClose{
+    justify-self: flex-end;
+}
+
+.videoPlayContainer>iframe{
+    width: 100%;
+    max-width: 600px;
 }
 
 .latest_video-container>div{

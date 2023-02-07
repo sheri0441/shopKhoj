@@ -68,22 +68,81 @@ const leftMove = () => {
     horiContainer.scrollLeft -= 343;
 }
 
-
-
 left.addEventListener('click', leftMove)
 right.addEventListener('click', rightMove)
 
-const video = document.getElementsByClassName('latest_video');
+
+// const playBtn = document.getElementsByClassName('latest_video-container');
+// const overLay = document.getElementsByClassName('overlay');
+// const video = document.getElementById('videoPlayContainer')
+
+// console.log(playBtn);
+// console.log(video);
+
+// for(let i=0; i< playBtn.length; i++){
+//     const playVideo = () => {
+//         video.style.display = 'flex'
+//     }
+
+//     playBtn[i].addEventListener("click", playVideo);
+// }
+
 const playBtn = document.getElementsByClassName('playBtn');
-const overLay = document.getElementsByClassName('overlay')
+const videoThumb = document.getElementsByClassName('latest_video-container')
+const video = document.getElementsByClassName('videoPlayContainer')[0]
+const videoClose = document.getElementById('videoClose')
 
-
-for(let i=0; i< video.length; i++){
+for(let i = 0; i<videoThumb.length; i++){
     const playVideo = () => {
-        overLay[i].style.display = "none";
-        video[i].play();
-        video[i].setAttribute("controls", "true");
+        video.style.display ="flex";
     }
 
-    playBtn[i].addEventListener("click", playVideo);
+    playBtn[i].addEventListener('click', playVideo)
 }
+
+const closeVideo = () => {
+    video.style.display = 'none';
+}
+
+videoClose.addEventListener('click', closeVideo)
+// nav srach bar interaction 
+
+const sb_icon_search = document.getElementById('sb-icon-search') ;
+const navSerachBar = document.getElementById('navSerachBar');
+
+const toggleTheNavSraechBar = () => {
+    if (navSerachBar.style.display === 'flex') {
+        navSerachBar.style.display = 'none'
+    }  else {
+        navSerachBar.style.display = 'flex'
+    }
+}
+
+sb_icon_search.addEventListener('click', toggleTheNavSraechBar)
+
+
+const checkTheSreachNav = () => {
+    
+    if (window.innerWidth >= 1220 ){
+        if(navSerachBar.style.display === 'none'){
+            navSerachBar.style.display = 'flex';
+        }
+    }
+}
+
+window.addEventListener('resize', checkTheSreachNav);
+
+// back to top botton 
+
+const back_to_top = document.getElementsByClassName('back-to-top')[0];
+
+const checkBackToTop = () => {
+    if( window.scrollY >= 875){
+        back_to_top.style.display = "flex"
+    } else {
+        back_to_top.style.display = "none"
+
+    }
+}
+
+window.addEventListener('scroll', checkBackToTop)
