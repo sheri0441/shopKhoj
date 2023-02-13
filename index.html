@@ -112,17 +112,19 @@
                         <img class="slide" src="./asset/image/heroSlider3D.png" alt="girlShopping">
                 </div>
     
-                <button class="arrow-left" onclick="plusDivs(-1)" id="arrow-left">
+                <button class="arrow-left" 
+                id="arrow-left">
                     <img src="./asset/arrow.svg" alt="" srcset="">
                 </button>
-                <button class="arrow-right" onclick="plusDivs(1)" id="arrow-right">
+                <button class="arrow-right" 
+                id="arrow-right">
                     <img src="./asset/arrow.svg" alt="" srcset="">
                 </button>
     
                 <div class="sliderPoints">
-                    <div class="slidePoint active" onclick="currentDiv(1)"></div>
-                    <div class="slidePoint" onclick="currentDiv(2)"></div>
-                    <div class="slidePoint" onclick="currentDiv(3)"></div>
+                    <div class="slidePoint active"></div>
+                    <div class="slidePoint"></div>
+                    <div class="slidePoint"></div>
                 </div>
             </section>
     
@@ -136,17 +138,20 @@
 
                     <div class="cityOption-wrapper">
                         <img class="locationIcon" src="./asset/icon/location.svg" alt="" srcset="">
-                        <select class="cityOption">
-                            <option disabled selected >select city</option>
-                            <option >Delhi</option>
-                            <option >Mumbai</option>
-                            <option >Chennai</option>
-                            <option >Bangalore</option>
-                            <option >Kolkata</option>
-                            <option >Ahmedabad</option>
-                            <option >Hyderabad</option>
-                            <option >Pune</option>
-                        </select>
+                        <div class="cityOption">
+                            <div class="select__trigger" id="select__trigger"><span>select city</span>
+                            </div>
+                            <div class="custom-options" id="custom-option">
+                                <span class="custom-option selected" data-value="delhi">Delhi</span>
+                                <span class="custom-option" data-value="mumbai">Mumbai</span>
+                                <span class="custom-option" data-value="chennai">chennai</span>
+                                <span class="custom-option" data-value="bangalore">bangalore</span>
+                                <span class="custom-option" data-value="kolkata">kolkata</span>
+                                <span class="custom-option" data-value="ahmedabad">ahmedabad</span>
+                                <span class="custom-option" data-value="hyderabad">hyderabad</span>
+                                <span class="custom-option" data-value="pune">pune</span>
+                            </div>
+                        </div>
                         <img class="arrowIcon" src="./asset/icon/cityOptionArrow.svg" alt="" srcset="">
                     </div>
                     <button type="submit" class="sreachBtn">
@@ -792,6 +797,6 @@
     </footer>
 
 
-    <script src="./index.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
