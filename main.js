@@ -134,7 +134,7 @@ window.addEventListener('scroll', checkBackToTop)
 const selectTrigger = document.getElementById('select__trigger');
 
 if(selectTrigger){
-    const customOption = document.getElementById('custom-option');
+    const customOption = document.getElementById('custom-options');
     
     const showCustomOption = () =>{
         customOption.classList.toggle('showOption');
@@ -154,7 +154,77 @@ if(selectTrigger){
     });
 
     selectTrigger.addEventListener('click', showCustomOption)
+
+
+    
 }
+
+// sreach bar and sreach REsult function 
+
+const sreachBar = document.getElementById('sreachBar');
+
+
+if(sreachBar){
+    const sreachResult = document.getElementById('sreachResult');
+
+    sreachBar.addEventListener('input', function(e) {
+        const inputValue = e.target.value;
+        const inputLength = inputValue.length;
+        if(inputLength > 0){
+            sreachResult.style.display = "block"
+        } else{
+            sreachResult.style.display = "none"
+        }
+    })
+
+}
+
+
+// city page product sub sections 
+
+const productShow = document.getElementById('products');
+
+if(productShow){
+    const productListBlock = document.getElementById('productListBlock');
+
+    const toggleProductList = () => {
+        if(productListBlock.style.display === 'flex'){
+            productListBlock.style.display = 'none'
+            productShow.style.color = '#000'
+        } else {
+            productListBlock.style.display = 'flex'
+            productShow.style.color = '#FF2525'
+        }
+    }
+
+    productShow.addEventListener('click', toggleProductList)
+}
+
+// console.log(productShow);
+
+const catagoryBtn = document.getElementsByClassName('catagoryBtn');
+
+if(catagoryBtn){
+    const productLink = document.getElementsByClassName('productLinkGroup');
+    
+    for(let i = 0; i < catagoryBtn.length; i++){
+        
+        
+        const showProductLink = () => {
+            for(let e = 0; e < productLink.length; e++){
+                productLink[e].classList.remove('showList');
+                catagoryBtn[e].classList.remove('showCatagory');
+            }
+    
+            productLink[i].classList.add('showList');
+            catagoryBtn[i].classList.add('showCatagory');
+    
+        }
+    
+        catagoryBtn[i].addEventListener('click', showProductLink)
+    }
+}
+
 
 
 
