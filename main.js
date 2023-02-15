@@ -166,6 +166,66 @@ const sreachBar = document.getElementById('sreachBar');
 
 if(sreachBar){
     const sreachResult = document.getElementById('sreachResult');
+    const resultNum = document.getElementById('resultNum');
+    const sreachCard =document.getElementsByClassName('sreachResult_card');
+    
+    resultNum.innerText = sreachCard.length
+    
+    
+    const componentElements = document.querySelectorAll(".sreachResult_card");
+    const nextSetBtn = document.getElementById("nextStep");
+    const perSetBtn = document.getElementById("perStep");
+    
+    // Convert the HTML elements to an array of their data values
+    const components = Array.from(componentElements);
+    
+    console.log(components);
+    
+    // Calculate the number of sets of 5 elements
+    const numSets = Math.ceil(components.length / 5);
+    
+    // Initialize the starting set index to 0
+    let currentSetIndex = 0;
+    
+    const hideAll = () => {
+        for(let i = 0; i<components.length; i++){
+            components[i].style.display = 'none';
+        }
+    }
+    
+    const setsOfFive = [];
+    for (let i = 0; i < numSets; i++) {
+      const start = i * 5;
+      const end = start + 5;
+      const set = components.slice(start, end);
+      setsOfFive.push(set);
+    }
+    
+    console.log(setsOfFive);
+    
+    const showGroup = () => {
+        hideAll();
+        const showGroup = setsOfFive[currentSetIndex];
+        for(let i= 0; i < showGroup.length; i++){
+            showGroup[i].style.display = 'flex'
+        }
+    }
+    
+    nextSetBtn.addEventListener('click', () => {
+        if(currentSetIndex < (setsOfFive.length -1 )){
+            currentSetIndex++;
+            console.log(currentSetIndex);
+            console.log(setsOfFive.length);
+        }
+        showGroup()
+    })
+    
+    perSetBtn.addEventListener('click', () => {
+        if(currentSetIndex > 0) {
+            currentSetIndex--;
+        }
+        showGroup()
+    })
 
     sreachBar.addEventListener('input', function(e) {
         const inputValue = e.target.value;
@@ -175,8 +235,9 @@ if(sreachBar){
         } else{
             sreachResult.style.display = "none"
         }
-    })
 
+        showGroup()
+    })
 }
 
 
@@ -200,7 +261,6 @@ if(productShow){
     productShow.addEventListener('click', toggleProductList)
 }
 
-// console.log(productShow);
 
 const catagoryBtn = document.getElementsByClassName('catagoryBtn');
 
