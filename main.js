@@ -179,7 +179,6 @@ if(sreachBar){
     // Convert the HTML elements to an array of their data values
     const components = Array.from(componentElements);
     
-    console.log(components);
     
     // Calculate the number of sets of 5 elements
     const numSets = Math.ceil(components.length / 5);
@@ -201,7 +200,6 @@ if(sreachBar){
       setsOfFive.push(set);
     }
     
-    console.log(setsOfFive);
     
     const showGroup = () => {
         hideAll();
@@ -214,8 +212,6 @@ if(sreachBar){
     nextSetBtn.addEventListener('click', () => {
         if(currentSetIndex < (setsOfFive.length -1 )){
             currentSetIndex++;
-            console.log(currentSetIndex);
-            console.log(setsOfFive.length);
         }
         showGroup()
     })
