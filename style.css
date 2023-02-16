@@ -22,7 +22,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /* border: none; */
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none;
@@ -779,10 +778,6 @@ nav>a:hover{
     color: var(--clr-mgray);
     letter-spacing: 2%;
     line-height: 99.5%;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none;
-
 }
 
 .custom-options{
@@ -2617,7 +2612,6 @@ footer{
 
     .four-flex{
         display: grid;
-        /* justify-content: space-between; */
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
@@ -3256,7 +3250,6 @@ footer{
     font-size: 15px;
     font-weight: var(--font-sb);
     text-transform: capitalize;
-    /* vertical-align: middle; */
     border-radius: var(--border-r);
   }
 
@@ -4600,7 +4593,6 @@ footer{
 /*------------ Shop Page Start Here --------------*/
 .shopDetail_container{
     background-color: #FAFAFA;
-    /* padding: 30px 16px 38px; */
     padding-top: 30px;
     padding-bottom: 38px;
     width:375px;
@@ -5380,7 +5372,6 @@ footer{
     position: absolute;
     top: 0;
     right: 0;
-    /* width: 20px; */
     padding: 19px 15px 19px 0;
     background-color: transparent;
 }
@@ -6018,7 +6009,6 @@ footer{
         padding-bottom: 53px;
         margin-inline: 0;
         grid-row: 2/3;
-        /* margin-top: 40px; */
     }
 
     .sideReadBlock+ .sideReadBlock{
@@ -6333,9 +6323,6 @@ footer{
     line-height: 150%;
     color: #27252A;
     cursor: pointer;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     list-style: none;
     position: relative;
     padding-right: 110px;
@@ -6692,9 +6679,6 @@ footer{
 #ceo+label, #advisor+label{
     cursor: pointer;
     color: #000;
-    -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none;
 }
 
 #ceo:checked+label, #advisor:checked+label{
@@ -7017,9 +7001,6 @@ footer{
 
 .videoPlayContainer{
     position: fixed;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%); */
     top: 0%;
     left: 0;
     z-index: 999;
