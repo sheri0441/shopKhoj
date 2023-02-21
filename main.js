@@ -85,12 +85,10 @@ const body = document.getElementsByTagName('body')[0]
 
 const hideMenu = () => {
     menu.style.display= 'none'
-    body.style.overflow = 'auto'
 }
 
 const showMenu = () => {
     menu.style.display= 'block'
-    body.style.overflow = 'hidden'
 }
 
 hamburger.addEventListener('click', showMenu)

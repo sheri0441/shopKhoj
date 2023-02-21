@@ -46,7 +46,7 @@ a{
     position: absolute;
     background: rgb(0, 0, 0);
     top: 0%;
-    left: 0%;
+    right: 0%;
     width: 100%;
     min-height: 100vh;
     height: 100%;
@@ -92,6 +92,7 @@ a{
     margin-inline: auto;
     width: 275px;
     margin-top: 72px;
+    justify-content: center
 }
 
 .menu_copyright{
@@ -129,51 +130,32 @@ a{
     .menu{
         padding-top: 40px;
         padding-bottom: 0px;
+        background: rgba(0, 0, 0, 0.858);
+        width: 40%;
     }
 
     .menuClose{
-        width: 76px;
+        width: 65px;
     }
 
-    
+    .topBtn{
+        padding-left: 16px;
+    }
 
     .menu_d{
         display: flex;
         flex-direction: column;
         height: 100%;
         position: relative;
+        padding-bottom: 50px;
 
     }
 
     .bottomBtn{
         width: 100%;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto;
-        align-items: center;
         margin-top: auto;
-        position: absolute;
-        bottom: 50px;
     }
 
-    .menu_copyright{
-        grid-row: 1/2;
-        grid-column: 2/3;
-        margin-top: 0px;
-
-    }
-
-    .menu_term{
-        grid-row: 1/2;
-        grid-column: 3/4;
-        margin-top: 0px;
-        margin-left: auto;
-
-    }
-
-    .menu_term > a{
-        font-size: 15px;
-        color: rgba(255, 255, 255, 0.601);
-    }
 }
 
 .menuSocialLink{
@@ -210,11 +192,6 @@ a{
 }
 
 @media (min-width:76.25em) {
-    .menu_socialLinks{
-        margin-top: 0;
-        margin-right: auto;
-        margin-left: 0;
-    }
 
     .nav{
         flex-direction: row;
@@ -222,6 +199,7 @@ a{
         width: 100%;
         max-width: 823px;
         margin-inline: auto;
+        padding-inline: 16px;
     }
 }
 
