@@ -44,7 +44,7 @@ a{
 
 .menu{
     position: absolute;
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.759);
     top: 0%;
     right: 0%;
     width: 100%;
@@ -361,7 +361,7 @@ a.back-to-top {
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 999;
+    z-index: 9;
     right: 30px;
     bottom: 30px;
     background: var(--clr-white);
@@ -6310,34 +6310,30 @@ footer{
 .faq>summary::before{
     content: '';
     position: absolute;
-    background-image: url('./asset/icon/redPlus.svg');
-    background-size: contain;
+    background-color: var(--clr-red);
     width: 12px;
-    height: 12px;
+    height: 2px;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-}
-
-.faq[open]>summary::before{
-    display: none;
+    border-radius: 50px;
 }
 
 .faq>summary::after{
     content: '';
     position: absolute;
-    background-image: url('./asset/icon/redMinus.svg');
-    background-size: contain;
+    background-color: var(--clr-red);
+    border-radius: 50px;
     width: 12px;
-    height: 1px;
+    height: 2px;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
-    display: none;
+    transform: translateY(-50%) rotate(90deg);
+    transition: all 0.125s ease-in-out;
 }
 
 .faq[open]>summary::after{
-    display: block;
+    transform: translateY(-50%) rotate(0deg);
 }
 
 .faq>p{
@@ -6368,8 +6364,8 @@ footer{
     }
 
     .faq>summary::before{
-        width: 17px;
-        height: 17px;
+        width: 21px;
+        height: 3px;
     }
 
     .faq>summary::after{
