@@ -5941,12 +5941,18 @@ footer{
 }
 
 .sideBar_ad{
-    width: 343px;
+    width: 100%;
+    max-width: 343px;
     height: 338px;
     border-radius: var(--border-r);
     margin-inline: auto;
     text-align: center;
     margin-top: 25px;
+}
+
+.sideBar_ad>img{
+    width: 100%;
+    max-width: 343px;
 }
 
 .blogSubmitBtn_blogDetail{
